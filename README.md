@@ -12,13 +12,16 @@ With Chop Chop you can find new recipes with even the most unrelated ingredients
 4. Users can see recipes made in the past, save recipes they want to make in the future, or share with a friend.
 
 ## Wireframes
-![Login](wireframes/wireframe1.png)
+![Login](wireframes/wireframe1.png | width=500)
 
-![Explore](wireframes/wireframe2.png)
 
-![Saved](wireframes/wireframe3.png) 
+![Explore](wireframes/wireframe2.png | width=500)
 
-![History](wireframes/wireframe4.png) 
+
+![Saved](wireframes/wireframe3.png | width=500) 
+
+
+![History](wireframes/wireframe4.png | width=500)
 
 
 ## Members
