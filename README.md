@@ -11,6 +11,15 @@ With Chop Chop you can find new recipes with even the most unrelated ingredients
 3. A grocery list of needed ingredients can be generated if the user wants to make a recipe. While shopping, user can check off what they bought and it will be stored/updated in user’s ingredients list.
 4. Users can see recipes made in the past, save recipes they want to make in the future, or share with a friend.
 
+## Wireframes
+![Login](wireframes/wireframe1.png)
+
+![Explore](wireframes/wireframe2.png)
+
+![Saved](wireframes/wireframe3.png) 
+
+![History](wireframes/wireframe4.png) 
+
 
 ## Members
 Seulmin Ryu, Matthew Rodgers, Jane Kim 
