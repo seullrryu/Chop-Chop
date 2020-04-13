@@ -21,8 +21,6 @@ With Chop Chop you can find new recipes with even the most unrelated ingredients
 <img src="wireframes/wireframe3.png" width="750">
 
 
-<img src="wireframes/wireframe4.png" width="750">
-
 
 ## Members
 Seulmin Ryu, Matthew Rodgers, Jane Kim 
