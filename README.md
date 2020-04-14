@@ -21,7 +21,7 @@ With Chop Chop you can find new recipes with even the most unrelated ingredients
 <img src="wireframes/saved.png" width="750">
 
 
-<img src="wireframes/list.png" width="750">
+<img src="wireframes/list.png" width="250">
 
 
 ## Members
