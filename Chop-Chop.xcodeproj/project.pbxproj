@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		4753062B2444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 475306292444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld */; };
 		4753062D2444E4EC00A4CEC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4753062C2444E4EC00A4CEC6 /* Assets.xcassets */; };
 		475306302444E4EC00A4CEC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4753062E2444E4EC00A4CEC6 /* LaunchScreen.storyboard */; };
+		E9A62A21F264D1CC38BBBEAD /* Pods_Chop_Chop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		4753062C2444E4EC00A4CEC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4753062F2444E4EC00A4CEC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		475306312444E4EC00A4CEC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		516B8D1D90CC3476BA1F512B /* Pods-Chop-Chop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chop-Chop.release.xcconfig"; path = "Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop.release.xcconfig"; sourceTree = "<group>"; };
+		B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chop_Chop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF273E3830F95989AE01CD9 /* Pods-Chop-Chop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chop-Chop.debug.xcconfig"; path = "Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A62A21F264D1CC38BBBEAD /* Pods_Chop_Chop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		004EA260A42847D952384898 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECF273E3830F95989AE01CD9 /* Pods-Chop-Chop.debug.xcconfig */,
+				516B8D1D90CC3476BA1F512B /* Pods-Chop-Chop.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		055DD2C3A03497829A46A730 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		475306142444E4E900A4CEC6 = {
 			isa = PBXGroup;
 			children = (
 				4753061F2444E4E900A4CEC6 /* Chop-Chop */,
 				4753061E2444E4E900A4CEC6 /* Products */,
+				004EA260A42847D952384898 /* Pods */,
+				055DD2C3A03497829A46A730 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 475306342444E4EC00A4CEC6 /* Build configuration list for PBXNativeTarget "Chop-Chop" */;
 			buildPhases = (
+				ADDB12A8F8665C02405F9F42 /* [CP] Check Pods Manifest.lock */,
 				475306192444E4E900A4CEC6 /* Sources */,
 				4753061A2444E4E900A4CEC6 /* Frameworks */,
 				4753061B2444E4E900A4CEC6 /* Resources */,
+				E0D6C32CB8E3EA374D5DA62F /* [CP] Embed Pods Frameworks */,
+				19FD02805215000638DE1A9D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19FD02805215000638DE1A9D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADDB12A8F8665C02405F9F42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chop-Chop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0D6C32CB8E3EA374D5DA62F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		475306192444E4E900A4CEC6 /* Sources */ = {
@@ -286,6 +372,7 @@
 		};
 		475306352444E4EC00A4CEC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECF273E3830F95989AE01CD9 /* Pods-Chop-Chop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +390,7 @@
 		};
 		475306362444E4EC00A4CEC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 516B8D1D90CC3476BA1F512B /* Pods-Chop-Chop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
