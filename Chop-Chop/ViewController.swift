@@ -8,21 +8,34 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
+import FirebaseUI
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var GButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
-        // Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+
+        
         
         let gSignIn = GIDSignInButton(frame: CGRect(x: 0, y: 0, width: 230, height: 48))
-        gSignIn.center = view.center
-        view.addSubview(gSignIn)
+            gSignIn.center = view.center
+            view.addSubview(gSignIn)
         
-        // Do any additional setup after loading the view.
+        
+        
+        
     }
+  
+    
+    
+    
     
     //Sign out function we can use later on
     //Do something like UIButton.addTarget(self, action: #selector(self.signOut(_:)), for: .touchUpInside)
@@ -31,5 +44,9 @@ class ViewController: UIViewController {
         print("Signing Out")
         GIDSignIn.sharedInstance().signOut()
     }
+    
+    
+    
+    
 }
 

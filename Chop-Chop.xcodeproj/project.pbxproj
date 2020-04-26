@@ -14,8 +14,10 @@
 		4753062B2444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 475306292444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld */; };
 		4753062D2444E4EC00A4CEC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4753062C2444E4EC00A4CEC6 /* Assets.xcassets */; };
 		475306302444E4EC00A4CEC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4753062E2444E4EC00A4CEC6 /* LaunchScreen.storyboard */; };
-		4788BC6C244A911500C321F2 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4788BC6B244A911500C321F2 /* logo.png */; };
 		E9A62A21F264D1CC38BBBEAD /* Pods_Chop_Chop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */; };
+		FD4B81852455F20100A6B847 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD4B81842455F20100A6B847 /* GoogleService-Info.plist */; };
+		FD4B81872455F22700A6B847 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FD4B81862455F22700A6B847 /* logo.png */; };
+		FD4B81892456118A00A6B847 /* exploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4B81882456118A00A6B847 /* exploreController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +30,12 @@
 		4753062C2444E4EC00A4CEC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4753062F2444E4EC00A4CEC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		475306312444E4EC00A4CEC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4788BC6B244A911500C321F2 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../Desktop/logo.png; sourceTree = "<group>"; };
 		516B8D1D90CC3476BA1F512B /* Pods-Chop-Chop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chop-Chop.release.xcconfig"; path = "Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop.release.xcconfig"; sourceTree = "<group>"; };
 		B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chop_Chop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF273E3830F95989AE01CD9 /* Pods-Chop-Chop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chop-Chop.debug.xcconfig"; path = "Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop.debug.xcconfig"; sourceTree = "<group>"; };
+		FD4B81842455F20100A6B847 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD4B81862455F22700A6B847 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		FD4B81882456118A00A6B847 /* exploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exploreController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +95,10 @@
 				4753062C2444E4EC00A4CEC6 /* Assets.xcassets */,
 				4753062E2444E4EC00A4CEC6 /* LaunchScreen.storyboard */,
 				475306312444E4EC00A4CEC6 /* Info.plist */,
+				FD4B81862455F22700A6B847 /* logo.png */,
+				FD4B81842455F20100A6B847 /* GoogleService-Info.plist */,
 				475306292444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld */,
-				4788BC6B244A911500C321F2 /* logo.png */,
+				FD4B81882456118A00A6B847 /* exploreController.swift */,
 			);
 			path = "Chop-Chop";
 			sourceTree = "<group>";
@@ -158,8 +164,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4788BC6C244A911500C321F2 /* logo.png in Resources */,
 				475306302444E4EC00A4CEC6 /* LaunchScreen.storyboard in Resources */,
+				FD4B81872455F22700A6B847 /* logo.png in Resources */,
+				FD4B81852455F20100A6B847 /* GoogleService-Info.plist in Resources */,
 				4753062D2444E4EC00A4CEC6 /* Assets.xcassets in Resources */,
 				475306282444E4E900A4CEC6 /* Main.storyboard in Resources */,
 			);
@@ -234,6 +241,7 @@
 				475306252444E4E900A4CEC6 /* ViewController.swift in Sources */,
 				4753062B2444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld in Sources */,
 				475306212444E4E900A4CEC6 /* AppDelegate.swift in Sources */,
+				FD4B81892456118A00A6B847 /* exploreController.swift in Sources */,
 				475306232444E4E900A4CEC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,8 +22,14 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.748327658139-b8akd07t0qbt40rpfv7vgd286o7ieo34</string>
+				<string>com.googleusercontent.apps.558826467576-0172hghe3hd45egqj0jvpmppmmt0n9ts</string>
 			</array>
 		</dict>
 	</array>
