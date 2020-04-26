@@ -34,17 +34,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaX-7p-EtW" userLabel="GButton">
-                                <rect key="frame" x="184" y="376" width="46" height="30"/>
+                                <rect key="frame" x="184" y="376" width="46" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="DZZ-ZD-4kb" kind="show" id="5Ho-8P-Sg6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="GButton" destination="xaX-7p-EtW" id="EmO-PN-Vxn"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,7 +55,7 @@
             <objects>
                 <viewController storyboardIdentifier="explore" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DZZ-ZD-4kb" customClass="exploreController" customModule="Chop_Chop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TP5-4v-kuL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhO-BF-asP">
@@ -66,25 +66,50 @@
                                         <leftBarButtonItems>
                                             <barButtonItem title="Start" id="bVs-j3-DBX"/>
                                             <barButtonItem title="Explore" id="Wgk-sb-FkF"/>
+                                            <barButtonItem title="Saved" id="iuO-OR-l0e"/>
+                                            <barButtonItem title="List" id="DsZ-Ur-evf"/>
                                         </leftBarButtonItems>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chop Chop!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="HV5-aE-VxQ">
+                                <rect key="frame" x="107" y="41" width="200" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWN-ea-dv2">
+                                <rect key="frame" x="366" y="46" width="28" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="person" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQJ-gp-epv">
+                                <rect key="frame" x="20" y="228" width="91" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="SLb-ch-xCp"/>
                     </view>
+                    <navigationItem key="navigationItem" id="g5R-Lu-JOl"/>
                     <connections>
                         <outlet property="exploreButton" destination="Wgk-sb-FkF" id="b2h-pt-ARK"/>
+                        <outlet property="listButton" destination="DsZ-Ur-evf" id="A2M-Qr-yOB"/>
+                        <outlet property="savedButton" destination="iuO-OR-l0e" id="hMv-A9-bfg"/>
                         <outlet property="startButton" destination="bVs-j3-DBX" id="Wte-Kh-vIQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QhL-kT-KrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="123"/>
+            <point key="canvasLocation" x="837.68115942028987" y="122.54464285714285"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo.png" width="794" height="635"/>
+        <image name="person" catalog="system" width="128" height="117"/>
     </resources>
 </document>

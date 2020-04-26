@@ -12,11 +12,15 @@ class exploreController: UIViewController {
 
     @IBOutlet weak var startButton: UIBarButtonItem!
     @IBOutlet weak var exploreButton: UIBarButtonItem!
+    @IBOutlet weak var savedButton: UIBarButtonItem!
+    @IBOutlet weak var listButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         startButton.width = 100.0
         exploreButton.width = 100.0
+        savedButton.width = 100.0
+        listButton.width = 100.0
     }
     
 
