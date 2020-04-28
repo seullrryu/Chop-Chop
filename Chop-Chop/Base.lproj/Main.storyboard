@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,33 +16,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The ultimate app for recipes and ingredients. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-9j-w9m">
-                                <rect key="frame" x="34" y="311" width="347" height="21"/>
+                                <rect key="frame" x="34" y="340" width="347" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="QbW-8F-pdX">
-                                <rect key="frame" x="87" y="175" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chop Chop!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pgG-gZ-fIu">
-                                <rect key="frame" x="107" y="89" width="200" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chop Chop!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pgG-gZ-fIu">
+                                <rect key="frame" x="107" y="89" width="200" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Uf2-Im-1rY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
                                 <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaX-7p-EtW" userLabel="GButton">
-                                <rect key="frame" x="184" y="376" width="46" height="32"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="QbW-8F-pdX">
+                                <rect key="frame" x="107" y="175" width="200" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="DZZ-ZD-4kb" kind="show" id="5Ho-8P-Sg6"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pgG-gZ-fIu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="06p-fL-Dnt"/>
+                            <constraint firstItem="pgG-gZ-fIu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="4e9-zM-KIb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pgG-gZ-fIu" secondAttribute="trailing" constant="107" id="mak-vI-5lE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -50,66 +49,112 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="132.58928571428572"/>
         </scene>
-        <!--Explore Controller-->
-        <scene sceneID="D5h-0v-T9V">
+        <!--View Controller-->
+        <scene sceneID="XXp-BR-Sgp">
             <objects>
-                <viewController storyboardIdentifier="explore" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DZZ-ZD-4kb" customClass="exploreController" customModule="Chop_Chop" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TP5-4v-kuL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <viewController id="Jao-Re-9Xt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bj7-gU-t4I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhO-BF-asP">
-                                <rect key="frame" x="0.0" y="122" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="oQO-gN-cUj">
-                                        <leftBarButtonItems>
-                                            <barButtonItem title="Start" id="bVs-j3-DBX"/>
-                                            <barButtonItem title="Explore" id="Wgk-sb-FkF"/>
-                                            <barButtonItem title="Saved" id="iuO-OR-l0e"/>
-                                            <barButtonItem title="List" id="DsZ-Ur-evf"/>
-                                        </leftBarButtonItems>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chop Chop!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="HV5-aE-VxQ">
-                                <rect key="frame" x="107" y="41" width="200" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chop Chop!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20b-Vp-wxE">
+                                <rect key="frame" x="132" y="75" width="150" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWN-ea-dv2">
-                                <rect key="frame" x="366" y="46" width="28" height="44"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="nLn-C7-1JN">
+                                <rect key="frame" x="38" y="114" width="338" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFc-VC-HqG">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="50"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdr-ai-Yy6">
+                                        <rect key="frame" x="94" y="0.0" width="52" height="50"/>
+                                        <state key="normal" title="Explore">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysz-Nv-T1M">
+                                        <rect key="frame" x="206" y="0.0" width="42" height="50"/>
+                                        <state key="normal" title="Saved">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztR-dO-oTh">
+                                        <rect key="frame" x="308" y="0.0" width="30" height="50"/>
+                                        <state key="normal" title="List">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="32x-wh-c87"/>
+                                    <constraint firstAttribute="height" constant="50" id="zuW-49-xJT"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please start inputting the ingredients you have!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j07-2p-jH3">
+                                <rect key="frame" x="27" y="274" width="360" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="person" catalog="system"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xA-qB-lRS">
+                                <rect key="frame" x="128" y="433" width="158" height="30"/>
+                                <state key="normal" title="Click to start scanning!"/>
+                                <connections>
+                                    <segue destination="6Wv-3b-HKE" kind="show" id="mXJ-A3-0jV"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQJ-gp-epv">
-                                <rect key="frame" x="20" y="228" width="91" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="289-vB-iZC">
+                                <rect key="frame" x="27" y="219" width="48" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="SLb-ch-xCp"/>
+                        <constraints>
+                            <constraint firstItem="nLn-C7-1JN" firstAttribute="top" secondItem="20b-Vp-wxE" secondAttribute="bottom" constant="10" id="3I8-dm-A71"/>
+                            <constraint firstItem="20b-Vp-wxE" firstAttribute="centerX" secondItem="nLn-C7-1JN" secondAttribute="centerX" id="9G2-bq-Gwi"/>
+                            <constraint firstItem="20b-Vp-wxE" firstAttribute="top" secondItem="dUj-zY-CkO" secondAttribute="top" constant="31" id="DSN-1p-jwO"/>
+                            <constraint firstItem="0xA-qB-lRS" firstAttribute="centerY" secondItem="Bj7-gU-t4I" secondAttribute="centerY" id="NZO-Zn-g8n"/>
+                            <constraint firstItem="20b-Vp-wxE" firstAttribute="leading" secondItem="dUj-zY-CkO" secondAttribute="leading" constant="132" id="b3w-Sr-xRz"/>
+                            <constraint firstItem="nLn-C7-1JN" firstAttribute="centerX" secondItem="Bj7-gU-t4I" secondAttribute="centerX" id="emx-80-Zon"/>
+                            <constraint firstItem="nLn-C7-1JN" firstAttribute="top" secondItem="20b-Vp-wxE" secondAttribute="bottom" constant="10" id="spk-VW-1tp"/>
+                            <constraint firstItem="0xA-qB-lRS" firstAttribute="centerX" secondItem="Bj7-gU-t4I" secondAttribute="centerX" id="ttp-Q7-bhg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dUj-zY-CkO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="g5R-Lu-JOl"/>
-                    <connections>
-                        <outlet property="exploreButton" destination="Wgk-sb-FkF" id="b2h-pt-ARK"/>
-                        <outlet property="listButton" destination="DsZ-Ur-evf" id="A2M-Qr-yOB"/>
-                        <outlet property="savedButton" destination="iuO-OR-l0e" id="hMv-A9-bfg"/>
-                        <outlet property="startButton" destination="bVs-j3-DBX" id="Wte-Kh-vIQ"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QhL-kT-KrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJ7-6l-ePI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837.68115942028987" y="122.54464285714285"/>
+            <point key="canvasLocation" x="873.91304347826099" y="132.58928571428572"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="qCG-9e-Rlf">
+            <objects>
+                <viewController id="6Wv-3b-HKE" customClass="ScanViewController" customModule="Chop_Chop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7wi-Px-eUy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uTW-JH-6JL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zB6-e0-mvP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="svh-9j-YqZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1610" y="133"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo.png" width="794" height="635"/>
-        <image name="person" catalog="system" width="128" height="117"/>
     </resources>
 </document>

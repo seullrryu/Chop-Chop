@@ -22,18 +22,10 @@ class ViewController: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
 
-        
-        
         let gSignIn = GIDSignInButton(frame: CGRect(x: 0, y: 0, width: 230, height: 48))
             gSignIn.center = view.center
             view.addSubview(gSignIn)
-        
-        
-        
-        
     }
-  
-    
     
     
     

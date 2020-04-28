@@ -103,7 +103,6 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Analytics
-  - Firebase/Auth
   - FirebaseUI/Auth
   - FirebaseUI/Google
   - GoogleSignIn
@@ -151,6 +150,6 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: c0dcebebb5244b9cc2d46fad1b1c1a7c3a8117b9
+PODFILE CHECKSUM: 1c42748c57347acdc5bbc90f55ec0e83f2267848
 
 COCOAPODS: 1.9.1
