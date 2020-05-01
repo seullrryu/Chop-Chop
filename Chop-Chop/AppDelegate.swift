@@ -89,12 +89,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     
     func login () {
-        self.window = UIWindow(frame: UIScreen.main.bounds);
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainPage = storyboard.instantiateViewController(withIdentifier: "Start") as! UIViewController
-        self.window?.rootViewController = mainPage
-        self.window?.makeKeyAndVisible()
-        print("login page change")
+//        self.window = UIWindow(frame: UIScreen.main.bounds);
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let mainPage = storyboard.instantiateViewController(withIdentifier: "Start")
+//        self.window?.rootViewController = mainPage
+//        self.window?.makeKeyAndVisible()
+//        print("login page change")
+        if let vc = GIDSignIn.sharedInstance()?.presentingViewController {
+            let signinVC = vc as! ViewController
+            
+            signinVC.login()
+        }
     }
 
 

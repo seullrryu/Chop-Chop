@@ -19,6 +19,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        let mainPage = self.storyboard!.instantiateViewController(withIdentifier: "Start") as! UIViewController
+//        
+//        UIApplication
+//        
+//        self.window?.rootViewController = mainPage
+//        self.window?.makeKeyAndVisible()
+        
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
 
@@ -35,6 +42,10 @@ class ViewController: UIViewController {
     @objc func signOut(_ sender: UIButton) {
         print("Signing Out")
         GIDSignIn.sharedInstance().signOut()
+    }
+    
+    func login() {
+        self.performSegue(withIdentifier: "toStart", sender: nil)
     }
     
     
