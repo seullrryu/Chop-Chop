@@ -193,6 +193,7 @@ class ScanViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     
     private func showInfo(for payload: String) {
         if let product = productCatalog.item(forKey: payload) {
+            //Data that you just scanned. 
             print(payload)
             showAlert(withTitle: product.name ?? "No product name provided", message: payload)
         } else {

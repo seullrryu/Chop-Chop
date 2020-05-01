@@ -65,6 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             }
             guard let uid = authResult?.user else {return}
             print("logged in", uid)
+            self.login()
         }
         
         
@@ -88,11 +89,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     
     func login () {
-//        self.window = UIWindow(frame: UIScreen.main.bounds);
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let mainPage = storyboard.instantiateViewController(withIdentifier: "explore") as! exploreController
-//        self.window?.rootViewController = mainPage
-//        self.window?.makeKeyAndVisible()
+        self.window = UIWindow(frame: UIScreen.main.bounds);
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainPage = storyboard.instantiateViewController(withIdentifier: "Start") as! UIViewController
+        self.window?.rootViewController = mainPage
+        self.window?.makeKeyAndVisible()
         print("login page change")
     }
 

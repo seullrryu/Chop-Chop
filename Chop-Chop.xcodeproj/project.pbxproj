@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473AB954245AA24700C45002 /* ProductCatalog.plist in Resources */ = {isa = PBXBuildFile; fileRef = 473AB953245AA24700C45002 /* ProductCatalog.plist */; };
 		475306212444E4E900A4CEC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475306202444E4E900A4CEC6 /* AppDelegate.swift */; };
 		475306232444E4E900A4CEC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475306222444E4E900A4CEC6 /* SceneDelegate.swift */; };
 		475306252444E4E900A4CEC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475306242444E4E900A4CEC6 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		473AB953245AA24700C45002 /* ProductCatalog.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ProductCatalog.plist; sourceTree = "<group>"; };
 		4753061D2444E4E900A4CEC6 /* Chop-Chop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chop-Chop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		475306202444E4E900A4CEC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		475306222444E4E900A4CEC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				475306262444E4E900A4CEC6 /* Main.storyboard */,
 				479E845D2457D8DB004E7906 /* ScanViewController.swift */,
 				479E845F2457F0F1004E7906 /* ProductCatalog.swift */,
+				473AB953245AA24700C45002 /* ProductCatalog.plist */,
 				479E84612457F123004E7906 /* Product.swift */,
 				4753062C2444E4EC00A4CEC6 /* Assets.xcassets */,
 				4753062E2444E4EC00A4CEC6 /* LaunchScreen.storyboard */,
@@ -172,6 +175,7 @@
 			files = (
 				475306302444E4EC00A4CEC6 /* LaunchScreen.storyboard in Resources */,
 				FD4B81872455F22700A6B847 /* logo.png in Resources */,
+				473AB954245AA24700C45002 /* ProductCatalog.plist in Resources */,
 				FD4B81852455F20100A6B847 /* GoogleService-Info.plist in Resources */,
 				4753062D2444E4EC00A4CEC6 /* Assets.xcassets in Resources */,
 				475306282444E4E900A4CEC6 /* Main.storyboard in Resources */,
