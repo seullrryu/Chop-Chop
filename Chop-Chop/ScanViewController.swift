@@ -195,8 +195,23 @@ class ScanViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         if let product = productCatalog.item(forKey: payload) {
             //Data that you just scanned. 
             print(payload)
-            showAlert(withTitle: product.name ?? "No product name provided", message: payload)
-        } else {
+            
+            //Store them in an global array
+            var scans = Scans.allScans
+            let item = product.name
+            
+            if (item != nil) {
+                scans.append(item!)
+            }
+            
+            //Move to the next view controller, where you have the option to scan more stuff
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "MoreOptions")
+            self.present(newViewController, animated: true, completion: nil)
+
+//            showAlert(withTitle: product.name ?? "No product name provided", message: payload)
+        }
+        else {
             showAlert(withTitle: "No item found for this payload", message: "")
         }
     }

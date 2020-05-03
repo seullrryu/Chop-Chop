@@ -36,7 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().delegate = self
         if (GIDSignIn.sharedInstance()?.hasPreviousSignIn())! {
             login()
-        } else {
+        }
+        else {
         /* code to show your login VC */
         }
       return GIDSignIn.sharedInstance().handle(url)
@@ -48,7 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
       if let error = error {
         if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
           print("The user has not signed in before or they have since signed out.")
-        } else {
+        }
+        else {
           print("\(error.localizedDescription)")
         }
         return
@@ -58,7 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,accessToken: authentication.accessToken)
         
         Auth.auth().signIn(with: credential) { (authResult, error) in
-          
             if let err = error {
                 print("failed ", err)
                 return
@@ -77,7 +78,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
       let givenName = user.profile.givenName
       let familyName = user.profile.familyName
       let email = user.profile.email
-      print(fullName)
+      print("Full name:", fullName)
+        
+        //Pull UPC Code from API, and store them in ProductCatalog.plist
+        
     }
     
     

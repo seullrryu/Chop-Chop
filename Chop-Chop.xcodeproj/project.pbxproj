@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471BF6F5245E91B3007F1694 /* Scans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471BF6F4245E91B3007F1694 /* Scans.swift */; };
+		471BF6F7245EA665007F1694 /* PotentialRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471BF6F6245EA665007F1694 /* PotentialRecipesViewController.swift */; };
+		471BF6F9245EA7A5007F1694 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471BF6F8245EA7A5007F1694 /* StartViewController.swift */; };
 		473AB954245AA24700C45002 /* ProductCatalog.plist in Resources */ = {isa = PBXBuildFile; fileRef = 473AB953245AA24700C45002 /* ProductCatalog.plist */; };
 		475306212444E4E900A4CEC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475306202444E4E900A4CEC6 /* AppDelegate.swift */; };
 		475306232444E4E900A4CEC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475306222444E4E900A4CEC6 /* SceneDelegate.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		471BF6F4245E91B3007F1694 /* Scans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scans.swift; sourceTree = "<group>"; };
+		471BF6F6245EA665007F1694 /* PotentialRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotentialRecipesViewController.swift; sourceTree = "<group>"; };
+		471BF6F8245EA7A5007F1694 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		473AB953245AA24700C45002 /* ProductCatalog.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ProductCatalog.plist; sourceTree = "<group>"; };
 		4753061D2444E4E900A4CEC6 /* Chop-Chop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chop-Chop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		475306202444E4E900A4CEC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,10 +104,13 @@
 				475306222444E4E900A4CEC6 /* SceneDelegate.swift */,
 				475306242444E4E900A4CEC6 /* ViewController.swift */,
 				475306262444E4E900A4CEC6 /* Main.storyboard */,
+				471BF6F8245EA7A5007F1694 /* StartViewController.swift */,
+				471BF6F6245EA665007F1694 /* PotentialRecipesViewController.swift */,
 				479E845D2457D8DB004E7906 /* ScanViewController.swift */,
 				479E845F2457F0F1004E7906 /* ProductCatalog.swift */,
 				473AB953245AA24700C45002 /* ProductCatalog.plist */,
 				479E84612457F123004E7906 /* Product.swift */,
+				471BF6F4245E91B3007F1694 /* Scans.swift */,
 				4753062C2444E4EC00A4CEC6 /* Assets.xcassets */,
 				4753062E2444E4EC00A4CEC6 /* LaunchScreen.storyboard */,
 				475306312444E4EC00A4CEC6 /* Info.plist */,
@@ -253,7 +262,10 @@
 				4753062B2444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld in Sources */,
 				479E84602457F0F1004E7906 /* ProductCatalog.swift in Sources */,
 				475306212444E4E900A4CEC6 /* AppDelegate.swift in Sources */,
+				471BF6F9245EA7A5007F1694 /* StartViewController.swift in Sources */,
 				475306232444E4E900A4CEC6 /* SceneDelegate.swift in Sources */,
+				471BF6F5245E91B3007F1694 /* Scans.swift in Sources */,
+				471BF6F7245EA665007F1694 /* PotentialRecipesViewController.swift in Sources */,
 				479E84622457F123004E7906 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
