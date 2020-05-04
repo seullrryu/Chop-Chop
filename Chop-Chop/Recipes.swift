@@ -9,5 +9,5 @@
 import Foundation
 
 struct Recipes {
-    static var recipes = [String]();
+    static var recipes = [Dictionary<String,Any>]();
 }

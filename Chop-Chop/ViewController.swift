@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         let gSignIn = GIDSignInButton(frame: CGRect(x: 0, y: 0, width: 230, height: 48))
             gSignIn.center = view.center
             view.addSubview(gSignIn)
+        
+        //Pulling recipes from database
         let db = Firestore.firestore();
         
         db.collection("items").getDocuments() { (querySnapshot, err) in
@@ -43,13 +45,12 @@ class ViewController: UIViewController {
             } else {
                 for document in querySnapshot!.documents {
                     //print("\(document.documentID) => \(document.data())")
-                    recipes.append("\(document.documentID) => \(document.data())")
+                    //recipes.append("\(document.documentID) => \(document.data())")
+                    recipes.append(document.data())
                 }
-                //print("recipes 3 here \(recipes[2])")
+                print((recipes[2]))
             }
         }
-        
-        
     }
     
     
