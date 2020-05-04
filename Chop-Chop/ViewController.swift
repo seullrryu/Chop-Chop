@@ -12,8 +12,7 @@ import Firebase
 import FirebaseUI
 import FirebaseFirestore
 
-var recipes = [String]();
-
+var recipes = Recipes.recipes
 
 class ViewController: UIViewController {
     
