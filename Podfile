@@ -16,4 +16,9 @@ target 'Chop-Chop' do
   pod 'FirebaseUI/Auth'
 
   pod 'FirebaseUI/Google'
+  
+  pod 'Firebase/Firestore'
+
+  # Optionally, include the Swift extensions if you're using Swift.
+  pod 'FirebaseFirestoreSwift'
 end

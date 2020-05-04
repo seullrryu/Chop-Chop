@@ -11,3 +11,4 @@ import Foundation
 struct Scans {
     static var allScans = [String]();
 }
+

@@ -10,6 +10,10 @@ import UIKit
 import GoogleSignIn
 import Firebase
 import FirebaseUI
+import FirebaseFirestore
+
+var recipes = [String]();
+
 
 class ViewController: UIViewController {
     
@@ -32,6 +36,21 @@ class ViewController: UIViewController {
         let gSignIn = GIDSignInButton(frame: CGRect(x: 0, y: 0, width: 230, height: 48))
             gSignIn.center = view.center
             view.addSubview(gSignIn)
+        let db = Firestore.firestore();
+        
+        db.collection("items").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    //print("\(document.documentID) => \(document.data())")
+                    recipes.append("\(document.documentID) => \(document.data())")
+                }
+                //print("recipes 3 here \(recipes[2])")
+            }
+        }
+        
+        
     }
     
     
