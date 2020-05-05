@@ -11,6 +11,7 @@
 		471BF6F7245EA665007F1694 /* PotentialRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471BF6F6245EA665007F1694 /* PotentialRecipesViewController.swift */; };
 		471BF6F9245EA7A5007F1694 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471BF6F8245EA7A5007F1694 /* StartViewController.swift */; };
 		471BF6FB24608EF2007F1694 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471BF6FA24608EF2007F1694 /* Recipes.swift */; };
+		471BF6FD2460F892007F1694 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471BF6FC2460F892007F1694 /* ExploreViewController.swift */; };
 		473AB954245AA24700C45002 /* ProductCatalog.plist in Resources */ = {isa = PBXBuildFile; fileRef = 473AB953245AA24700C45002 /* ProductCatalog.plist */; };
 		475306212444E4E900A4CEC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475306202444E4E900A4CEC6 /* AppDelegate.swift */; };
 		475306232444E4E900A4CEC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475306222444E4E900A4CEC6 /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 		479E845E2457D8DB004E7906 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E845D2457D8DB004E7906 /* ScanViewController.swift */; };
 		479E84602457F0F1004E7906 /* ProductCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E845F2457F0F1004E7906 /* ProductCatalog.swift */; };
 		479E84622457F123004E7906 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E84612457F123004E7906 /* Product.swift */; };
+		47C1D9F42461091B00FC6603 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C1D9F32461091B00FC6603 /* CollectionViewCell.swift */; };
 		E9A62A21F264D1CC38BBBEAD /* Pods_Chop_Chop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */; };
 		FD4B81852455F20100A6B847 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD4B81842455F20100A6B847 /* GoogleService-Info.plist */; };
 		FD4B81872455F22700A6B847 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FD4B81862455F22700A6B847 /* logo.png */; };
@@ -32,6 +34,7 @@
 		471BF6F6245EA665007F1694 /* PotentialRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotentialRecipesViewController.swift; sourceTree = "<group>"; };
 		471BF6F8245EA7A5007F1694 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		471BF6FA24608EF2007F1694 /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		471BF6FC2460F892007F1694 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		473AB953245AA24700C45002 /* ProductCatalog.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ProductCatalog.plist; sourceTree = "<group>"; };
 		4753061D2444E4E900A4CEC6 /* Chop-Chop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chop-Chop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		475306202444E4E900A4CEC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		479E845D2457D8DB004E7906 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		479E845F2457F0F1004E7906 /* ProductCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalog.swift; sourceTree = "<group>"; };
 		479E84612457F123004E7906 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		47C1D9F32461091B00FC6603 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		516B8D1D90CC3476BA1F512B /* Pods-Chop-Chop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chop-Chop.release.xcconfig"; path = "Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop.release.xcconfig"; sourceTree = "<group>"; };
 		B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chop_Chop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF273E3830F95989AE01CD9 /* Pods-Chop-Chop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chop-Chop.debug.xcconfig"; path = "Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				475306222444E4E900A4CEC6 /* SceneDelegate.swift */,
 				475306242444E4E900A4CEC6 /* ViewController.swift */,
 				475306262444E4E900A4CEC6 /* Main.storyboard */,
+				47C1D9F32461091B00FC6603 /* CollectionViewCell.swift */,
+				471BF6FC2460F892007F1694 /* ExploreViewController.swift */,
 				471BF6F8245EA7A5007F1694 /* StartViewController.swift */,
 				471BF6F6245EA665007F1694 /* PotentialRecipesViewController.swift */,
 				479E845D2457D8DB004E7906 /* ScanViewController.swift */,
@@ -268,6 +274,8 @@
 				471BF6F9245EA7A5007F1694 /* StartViewController.swift in Sources */,
 				471BF6FB24608EF2007F1694 /* Recipes.swift in Sources */,
 				475306232444E4E900A4CEC6 /* SceneDelegate.swift in Sources */,
+				47C1D9F42461091B00FC6603 /* CollectionViewCell.swift in Sources */,
+				471BF6FD2460F892007F1694 /* ExploreViewController.swift in Sources */,
 				471BF6F5245E91B3007F1694 /* Scans.swift in Sources */,
 				471BF6F7245EA665007F1694 /* PotentialRecipesViewController.swift in Sources */,
 				479E84622457F123004E7906 /* Product.swift in Sources */,

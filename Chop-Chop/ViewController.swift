@@ -48,7 +48,7 @@ class ViewController: UIViewController {
                     //recipes.append("\(document.documentID) => \(document.data())")
                     recipes.append(document.data())
                 }
-                print((recipes[2]))
+//                print((recipes[2]))
             }
         }
     }
