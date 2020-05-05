@@ -16,11 +16,35 @@ var recipes = Recipes.recipes
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var viewForLayer: UIView!
+    var gradientLayer: CAGradientLayer!
+    var blueColor = UIColor(red:0.0, green: (228/255), blue:1.0, alpha: 0.5 )
+    var greenColor = UIColor(red:(105/255), green: (255/255), blue: (151/255), alpha: 0.5)
+    
+    var x = 0
+    var y = -30
+    var w = 414
+    var h = 300
+    
+    
     @IBOutlet weak var GButton: UIButton!
     
-    
+    func createGradientLayer() {
+        gradientLayer = CAGradientLayer()
+        gradientLayer.cornerRadius = 80.0
+        gradientLayer.frame = CGRect(x: x, y:y, width: w, height: h)
+        
+        gradientLayer.colors = [blueColor.cgColor, greenColor.cgColor]
+        self.view.layer.addSublayer(gradientLayer)
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createGradientLayer()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
 //        let mainPage = self.storyboard!.instantiateViewController(withIdentifier: "Start") as! UIViewController
 //        
@@ -53,7 +77,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+
     
     //Sign out function we can use later on
     //Do something like UIButton.addTarget(self, action: #selector(self.signOut(_:)), for: .touchUpInside)

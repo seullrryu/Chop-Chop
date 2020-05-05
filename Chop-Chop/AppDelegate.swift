@@ -80,6 +80,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
       let givenName = user.profile.givenName
       let familyName = user.profile.familyName
       let email = user.profile.email
+        if user.profile.hasImage{
+            let imageUrl = signIn.currentUser.profile.imageURL(withDimension: 120)
+            print(" image url: ", imageUrl?.absoluteString)
+        }
+    
       print("Full name:", fullName)
         
         //Pull UPC Code from API, and store them in ProductCatalog.plist

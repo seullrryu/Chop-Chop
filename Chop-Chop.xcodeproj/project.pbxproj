@@ -23,6 +23,7 @@
 		479E845E2457D8DB004E7906 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E845D2457D8DB004E7906 /* ScanViewController.swift */; };
 		479E84602457F0F1004E7906 /* ProductCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E845F2457F0F1004E7906 /* ProductCatalog.swift */; };
 		479E84622457F123004E7906 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E84612457F123004E7906 /* Product.swift */; };
+		8C4E03312461683C00F99A63 /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E03302461683C00F99A63 /* mainView.swift */; };
 		E9A62A21F264D1CC38BBBEAD /* Pods_Chop_Chop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */; };
 		FD4B81852455F20100A6B847 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD4B81842455F20100A6B847 /* GoogleService-Info.plist */; };
 		FD4B81872455F22700A6B847 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FD4B81862455F22700A6B847 /* logo.png */; };
@@ -48,6 +49,7 @@
 		479E845F2457F0F1004E7906 /* ProductCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalog.swift; sourceTree = "<group>"; };
 		479E84612457F123004E7906 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		516B8D1D90CC3476BA1F512B /* Pods-Chop-Chop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chop-Chop.release.xcconfig"; path = "Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop.release.xcconfig"; sourceTree = "<group>"; };
+		8C4E03302461683C00F99A63 /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
 		B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chop_Chop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF273E3830F95989AE01CD9 /* Pods-Chop-Chop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chop-Chop.debug.xcconfig"; path = "Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop.debug.xcconfig"; sourceTree = "<group>"; };
 		FD4B81842455F20100A6B847 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				475306222444E4E900A4CEC6 /* SceneDelegate.swift */,
 				475306242444E4E900A4CEC6 /* ViewController.swift */,
 				475306262444E4E900A4CEC6 /* Main.storyboard */,
+				8C4E03302461683C00F99A63 /* mainView.swift */,
 				471BF6FC2460F892007F1694 /* ExploreViewController.swift */,
 				471BF6F8245EA7A5007F1694 /* StartViewController.swift */,
 				471BF6F6245EA665007F1694 /* PotentialRecipesViewController.swift */,
@@ -265,6 +268,7 @@
 			files = (
 				479E845E2457D8DB004E7906 /* ScanViewController.swift in Sources */,
 				475306252444E4E900A4CEC6 /* ViewController.swift in Sources */,
+				8C4E03312461683C00F99A63 /* mainView.swift in Sources */,
 				4753062B2444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld in Sources */,
 				479E84602457F0F1004E7906 /* ProductCatalog.swift in Sources */,
 				475306212444E4E900A4CEC6 /* AppDelegate.swift in Sources */,
