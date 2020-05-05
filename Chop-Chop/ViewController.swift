@@ -90,9 +90,5 @@ class ViewController: UIViewController {
     func login() {
         self.performSegue(withIdentifier: "toStart", sender: nil)
     }
-    
-    
-    
-    
 }
 

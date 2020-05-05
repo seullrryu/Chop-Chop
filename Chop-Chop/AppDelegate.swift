@@ -29,8 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
-        UINavigationBar.appearance().barTintColor = UIColor.yellow;
-        UINavigationBar.appearance().tintColor = UIColor.orange;
+//        UINavigationBar.appearance().barTintColor = UIColor.yellow;
+//        UINavigationBar.appearance().tintColor = UIColor.orange;
         return true
     }
     
