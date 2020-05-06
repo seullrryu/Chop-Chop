@@ -115,24 +115,18 @@ class ExploreViewController: UIViewController {
         }
         
         
-        // Go here to see how to parse JSON
-        // https://github.com/SwiftyJSON/SwiftyJSON
-        // For video tutorial
-        // https://www.youtube.com/watch?v=Rqr3w8scm2E
-        var jsonArray = [JSON]();
-        for (index, _) in jsonRecipes.enumerated() {
-            let json = JSON(jsonRecipes[index])
-            //let j = JSON(parseJSON: jsonRecipes[index])
-            jsonArray.append(json)
-            //print(json)
-            //print(index)
-            //print(j)
-            
-        }
+        // IMPORTANT
+        // Look below to see how to parse JSON
+        
         //print(jsonRecipes[0])
         //print(jsonArray[2])
         print(jsonArray[22]["name"])
         print(jsonArray[22]["name"].stringValue)
+        
+        // or go here
+        // https://github.com/SwiftyJSON/SwiftyJSON
+        // For video tutorial
+        // https://www.youtube.com/watch?v=Rqr3w8scm2E
         
 
     }

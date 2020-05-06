@@ -11,9 +11,12 @@ import GoogleSignIn
 import Firebase
 import FirebaseUI
 import FirebaseFirestore
+import SwiftyJSON
+import Alamofire
 
 var recipes = Recipes.recipes
 var jsonRecipes = Recipes2.recipes
+var jsonArray = [JSON]();
 
 class ViewController: UIViewController {
     
@@ -74,9 +77,17 @@ class ViewController: UIViewController {
                     
                     jsonRecipes.append(document.data())
                 }
+                for (index, _) in jsonRecipes.enumerated() {
+                    let json = JSON(jsonRecipes[index])
+                    jsonArray.append(json)
+                    
+                    
+                }
 //                print((recipes[2]))
             }
         }
+        
+        
     }
     
 
