@@ -9,18 +9,25 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+var indexArray1 = [30,31,32,33]
+       var urlArray1 = [String]()
+       var nameArray1 = [String]()
+var imageArray = [UIImage]()
+var tempImage1 UIImage!;
+var tempImage2 UIImage!;
+var tempImage3 UIImage!;
+var tempImage4 UIImage!;
 
 class SavedRecipesTableViewController: UITableViewController {
     
     //MARK: Properties
+    
+    
     //array of saved recipes
     var savedRecipeArray = [SavedRecipe]()
     
     //temp hardcoded saved recipes for now
-    //img1: UIImageView!
-    //img2: UIImageView!
-    //img3: UIImageView
-    //img4: UIImageView
+    
     
     //MARK: Private Methods
     private func loadSampleSavedRecipes(){
@@ -28,7 +35,78 @@ class SavedRecipesTableViewController: UITableViewController {
         
     }
     
-    private func loadSavedRecipes() {
+    func loadSavedRecipes() {
+        var indexArray1 = [30,31,32,33]
+        var urlArray1 = [String]()
+        var nameArray1 = [String]()
+        
+        for i in indexArray1 {
+            let url = jsonArray[i]["image"].stringValue
+            urlArray1.append(url)
+            
+            let name = jsonArray[i]["name"].stringValue
+            nameArray1.append(name)
+        }
+        
+        if let url = URL(string:urlArray1[0]) {
+            do {
+                let data = try Data(contentsOf: url)
+                tempImage1 = UIImage(data:data)
+                imageArray.add(tempImage1)
+            }
+            catch let err{
+                print("error", err)
+            }
+        }
+        if let url = URL(string:urlArray1[1]) {
+            do {
+                let data = try Data(contentsOf: url)
+                tempImage2 = UIImage(data:data)
+            }
+            catch let err{
+                print("error", err)
+            }
+        }
+        if let url = URL(string:urlArray1[2]) {
+            do {
+                let data = try Data(contentsOf: url)
+                tempImage3 = UIImage(data:data)
+            }
+            catch let err{
+                print("error", err)
+            }
+        }
+        if let url = URL(string:urlArray1[3]) {
+            do {
+                let data = try Data(contentsOf: url)
+                tempImage4 = UIImage(data:data)
+            }
+            catch let err{
+                print("error", err)
+            }
+        }
+        var SR1 = SavedRecipe(recipeName: nameArray1[0], recipeImage: tempImage1)
+        savedRecipeArray.add(SR1)
+        var SR2 = SavedRecipe(recipeName: nameArray1[1], recipeImage: tempImage2)
+        savedRecipeArray.add(SR2)
+        var SR3 = SavedRecipe(recipeName: nameArray1[2], recipeImage: tempImage3)
+        savedRecipeArray.add(SR3)
+        var SR4 = SavedRecipe(recipeName: nameArray1[3], recipeImage: tempImage4)
+        
+        
+        //SavedRecipe(recipeName: nameArray1[0] )
+        
+        
+        
+        //create savedRecipe objects
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       // }
+        
         
     }
     
@@ -36,23 +114,24 @@ class SavedRecipesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
         
-        var indexArray = [30,31,32,33]
-        var urlArray = [String]()
-        var nameArray = [String]()
+        var indexArray1 = [30,31,32,33]
+        var urlArray1 = [String]()
+        var nameArray1 = [String]()
         
-        for i in indexArray {
+        for i in indexArray1 {
             let url = jsonArray[i]["image"].stringValue
-            urlArray.append(url)
+            urlArray1.append(url)
             
             let name = jsonArray[i]["name"].stringValue
-            nameArray.append(name)
+            nameArray1.append(name)
         }
         
         //use URLs to get images from json array
         if let url = URL(string: urlArray[0]) {
             do {
-               // let data = try Data(contentsOf: url)
+               let data = try Data(contentsOf: url)
                 
                 ////self.img1.setImage(UIImage
             }
@@ -63,29 +142,37 @@ class SavedRecipesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         }
+ */
     }
+ 
 
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return savedRecipeArray.count
     }
+ 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return savedRecipeArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cellIdentifier = "SavedRecipeTableViewCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SavedRecipeTableViewCell", for: indexPath) as! SavedRecipeTableViewCell
+        let sRecipe = savedRecipeArray[indexPath.row]
+        cell.SavedRecipeName.text = sRecipe.recipeName
+        cell.savedRecipeImage.image = tempImage1
+        //cell.textLabel?.text = "Cell Row: \(indexPath.row) Section: \(indexPath.section)"
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

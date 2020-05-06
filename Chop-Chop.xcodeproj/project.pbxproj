@@ -25,6 +25,7 @@
 		479E84622457F123004E7906 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E84612457F123004E7906 /* Product.swift */; };
 		8C0F44DB2462D92300ABD9E4 /* SavedRecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F44DA2462D92300ABD9E4 /* SavedRecipeTableViewCell.swift */; };
 		8C0F44DD2462FEF900ABD9E4 /* SavedRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F44DC2462FEF800ABD9E4 /* SavedRecipesTableViewController.swift */; };
+		8C1215DC24632A6200326842 /* SavedRecipesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1215DB24632A6200326842 /* SavedRecipesList.swift */; };
 		8CD49AA5246316B2007016FC /* SavedRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD49AA4246316B1007016FC /* SavedRecipe.swift */; };
 		E9A62A21F264D1CC38BBBEAD /* Pods_Chop_Chop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */; };
 		FD09549724630EC3006F6DBF /* ExploreSpecificController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD09549624630EC3006F6DBF /* ExploreSpecificController.swift */; };
@@ -54,6 +55,7 @@
 		516B8D1D90CC3476BA1F512B /* Pods-Chop-Chop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chop-Chop.release.xcconfig"; path = "Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop.release.xcconfig"; sourceTree = "<group>"; };
 		8C0F44DA2462D92300ABD9E4 /* SavedRecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipeTableViewCell.swift; sourceTree = "<group>"; };
 		8C0F44DC2462FEF800ABD9E4 /* SavedRecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesTableViewController.swift; sourceTree = "<group>"; };
+		8C1215DB24632A6200326842 /* SavedRecipesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesList.swift; sourceTree = "<group>"; };
 		8CD49AA4246316B1007016FC /* SavedRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedRecipe.swift; path = ../SavedRecipe.swift; sourceTree = "<group>"; };
 		B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chop_Chop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF273E3830F95989AE01CD9 /* Pods-Chop-Chop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chop-Chop.debug.xcconfig"; path = "Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				479E845F2457F0F1004E7906 /* ProductCatalog.swift */,
 				473AB953245AA24700C45002 /* ProductCatalog.plist */,
 				479E84612457F123004E7906 /* Product.swift */,
+				8C1215DB24632A6200326842 /* SavedRecipesList.swift */,
 				471BF6F4245E91B3007F1694 /* Scans.swift */,
 				471BF6FA24608EF2007F1694 /* Recipes.swift */,
 				4753062C2444E4EC00A4CEC6 /* Assets.xcassets */,
@@ -279,6 +282,7 @@
 				475306252444E4E900A4CEC6 /* ViewController.swift in Sources */,
 				8CD49AA5246316B2007016FC /* SavedRecipe.swift in Sources */,
 				FD09549724630EC3006F6DBF /* ExploreSpecificController.swift in Sources */,
+				8C1215DC24632A6200326842 /* SavedRecipesList.swift in Sources */,
 				8C0F44DD2462FEF900ABD9E4 /* SavedRecipesTableViewController.swift in Sources */,
 				4753062B2444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld in Sources */,
 				479E84602457F0F1004E7906 /* ProductCatalog.swift in Sources */,
