@@ -26,7 +26,7 @@ class ExploreViewController: UIViewController {
         super.viewDidLoad()
         
         // Choose 4 random recipes from the recipee in the database
-        let length = recipes.count
+        let length = jsonArray.count
         var indexArray = [Int]()
         var urlArray = [String]()
         var nameArray = [String]()

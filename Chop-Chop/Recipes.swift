@@ -8,8 +8,16 @@
 
 import Foundation
 
-struct Recipes {
-    static var recipes = Dictionary<String,String>();
+struct Recipe : CustomStringConvertible {
+    let name: String
+    let originalString: String
+    let image: String
+    let ingredients: String
+    var count: Int
+    
+    var description: String {
+        return name
+    }
 }
 
 struct Recipes2 {
