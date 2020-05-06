@@ -19,6 +19,7 @@ var jsonArray = [JSON]();
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var jokeLabel: UILabel!
     @IBOutlet weak var viewForLayer: UIView!
     var gradientLayer: CAGradientLayer!
     var blueColor = UIColor(red:0.0, green: (228/255), blue:1.0, alpha: 0.5 )
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        getJokeRequest()
 //        let mainPage = self.storyboard!.instantiateViewController(withIdentifier: "Start") as! UIViewController
 //        
 //        UIApplication
@@ -99,6 +100,23 @@ class ViewController: UIViewController {
     
     func login() {
         self.performSegue(withIdentifier: "toStart", sender: nil)
+    }
+    
+    func getJokeRequest() {
+        let url = "https://api.spoonacular.com/food/jokes/random?apiKey=7416dc48fba247819ce90cd88a3974ec"
+        
+        let requestURL = url
+        print(requestURL)
+        
+        AF.request(requestURL, method: .get, encoding:JSONEncoding.default).responseData { response in
+            guard let data = response.data else {return}
+            let json = try? JSON(data: data)
+            let stringJSON = json!["text"].stringValue
+            
+            //print(stringJSON)
+            self.jokeLabel.text = stringJSON
+            
+        }
     }
 }
 

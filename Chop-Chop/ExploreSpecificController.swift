@@ -12,6 +12,7 @@ import Alamofire
 
 class ExploreSpecificController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var img: UIImageView!
     
     @IBOutlet weak var label: UILabel!
@@ -41,6 +42,7 @@ class ExploreSpecificController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getRecipeRequest(idOfRecipe: recipeID)
+        nameLabel.text = recipeName
         if let url = URL(string:recipeImage) {
             do {
                 let data = try Data(contentsOf: url)
