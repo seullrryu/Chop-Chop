@@ -14,7 +14,6 @@ import FirebaseFirestore
 import SwiftyJSON
 import Alamofire
 
-var recipes = Recipes.recipes
 var jsonRecipes = Recipes2.recipes
 var jsonArray = [JSON]();
 
@@ -72,9 +71,7 @@ class ViewController: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    //print("\(document.documentID) => \(document.data())")
-                    recipes.append(document.data())
-                    
+                    //print("\(document.documentID) => \(document.data())")                    
                     jsonRecipes.append(document.data())
                 }
                 for (index, _) in jsonRecipes.enumerated() {

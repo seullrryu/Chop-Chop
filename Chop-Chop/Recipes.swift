@@ -9,7 +9,7 @@
 import Foundation
 
 struct Recipes {
-    static var recipes = [Dictionary<String,Any>]();
+    static var recipes = Dictionary<String,String>();
 }
 
 struct Recipes2 {

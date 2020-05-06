@@ -22,15 +22,9 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var label4: UILabel!
     
-    let urlKey = "https://spoonacular.com/recipeImages/594403-312x231.jpg"
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        
-        print("exploreHere")
         // Choose 4 random recipes from the recipee in the database
         let length = recipes.count
         var indexArray = [Int]()
@@ -60,10 +54,10 @@ class ExploreViewController: UIViewController {
                 
         
         for i in indexArray {
-            let url = recipes[i]["image"] as! String
+            let url = jsonArray[i]["image"].stringValue
             urlArray.append(url)
             
-            let name = recipes[i]["name"] as! String
+            let name = jsonArray[i]["name"].stringValue
             nameArray.append(name)
         }
         
@@ -118,16 +112,17 @@ class ExploreViewController: UIViewController {
         // IMPORTANT
         // Look below to see how to parse JSON
         
-        //print(jsonRecipes[0])
-        //print(jsonArray[2])
-        print(jsonArray[22]["name"])
-        print(jsonArray[22]["missedIngredients"][0]["name"])
-        print(jsonArray[22]["name"].stringValue)
+//        print(jsonArray[22]["name"])
+//        print(jsonArray[22]["missedIngredients"][0]["name"])
+//        print(jsonArray[22]["name"].stringValue)
         
         // or go here
         // https://github.com/SwiftyJSON/SwiftyJSON
         // For video tutorial
         // https://www.youtube.com/watch?v=Rqr3w8scm2E
+        
+        
+        
         
 
     }
