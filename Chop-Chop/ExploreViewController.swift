@@ -12,10 +12,13 @@ import Alamofire
 
 class ExploreViewController: UIViewController {
     
-    @IBOutlet weak var img1: UIImageView!
-    @IBOutlet weak var img2: UIImageView!
-    @IBOutlet weak var img3: UIImageView!
-    @IBOutlet weak var img4: UIImageView!
+ 
+    @IBOutlet weak var img1: UIButton!
+    
+    @IBOutlet weak var img2: UIButton!
+    @IBOutlet weak var img3: UIButton!
+    @IBOutlet weak var img4: UIButton!
+    
     
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
@@ -27,6 +30,7 @@ class ExploreViewController: UIViewController {
         
         // Choose 4 random recipes from the recipee in the database
         let length = jsonArray.count
+        var idArray = [String]()
         var indexArray = [Int]()
         var urlArray = [String]()
         var nameArray = [String]()
@@ -59,6 +63,9 @@ class ExploreViewController: UIViewController {
             
             let name = jsonArray[i]["name"].stringValue
             nameArray.append(name)
+            
+            let id = jsonArray[i]["id"].stringValue
+            idArray.append(id)
         }
         
         
@@ -67,7 +74,7 @@ class ExploreViewController: UIViewController {
         if let url = URL(string:urlArray[0]) {
             do {
                 let data = try Data(contentsOf: url)
-                self.img1.image = UIImage(data:data)
+                self.img1.setImage(UIImage(data:data), for: .normal)
                 self.label1.text = nameArray[0]
             }
             catch let err {
@@ -78,7 +85,7 @@ class ExploreViewController: UIViewController {
         if let url = URL(string:urlArray[1]) {
             do {
                 let data = try Data(contentsOf: url)
-                self.img2.image = UIImage(data:data)
+                self.img2.setImage(UIImage(data:data), for: .normal)
                 self.label2.text = nameArray[1]
             }
             catch let err {
@@ -89,7 +96,7 @@ class ExploreViewController: UIViewController {
         if let url = URL(string:urlArray[2]) {
             do {
                 let data = try Data(contentsOf: url)
-                self.img3.image = UIImage(data:data)
+                self.img3.setImage(UIImage(data:data), for: .normal)
                 self.label3.text = nameArray[2]
             }
             catch let err {
@@ -100,7 +107,7 @@ class ExploreViewController: UIViewController {
         if let url = URL(string:urlArray[3]) {
             do {
                 let data = try Data(contentsOf: url)
-                self.img4.image = UIImage(data:data)
+                self.img4.setImage(UIImage(data:data), for: .normal)
                 self.label4.text = nameArray[3]
             }
             catch let err {
@@ -126,4 +133,18 @@ class ExploreViewController: UIViewController {
         
 
     }
+    @IBAction func img1Click(_ sender: Any) {
+        print("1")
+    }
+    @IBAction func img2Click(_ sender: Any) {
+        print("2")
+    }
+    @IBAction func img3Click(_ sender: Any) {
+        print("3")
+    }
+    @IBAction func img4Click(_ sender: Any) {
+        print("4")
+    }
+    
+    
 }
