@@ -17,8 +17,15 @@ class SavedRecipesTableViewController: UITableViewController {
     var savedRecipeArray = [SavedRecipe]()
     
     //temp hardcoded saved recipes for now
+    //img1: UIImageView!
+    //img2: UIImageView!
+    //img3: UIImageView
+    //img4: UIImageView
     
     //MARK: Private Methods
+    private func loadSampleSavedRecipes(){
+        
+    }
     
     private func loadSavedRecipes() {
         
@@ -41,12 +48,20 @@ class SavedRecipesTableViewController: UITableViewController {
             nameArray.append(name)
         }
         
+        //use URLs to get images from json array
+        if let url = URL(string: urlArray[0]) {
+            do {
+               // let data = try Data(contentsOf: url)
+                self.img1.setImage(UIImage)
+                ////self.img1.setImage(UIImage
+            }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        }
     }
 
     // MARK: - Table view data source
