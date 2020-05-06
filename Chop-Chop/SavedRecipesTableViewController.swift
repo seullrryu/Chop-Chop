@@ -9,14 +9,12 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+
 var indexArray1 = [30,31,32,33]
        var urlArray1 = [String]()
        var nameArray1 = [String]()
 var imageArray = [UIImage]()
-var tempImage1 UIImage!;
-var tempImage2 UIImage!;
-var tempImage3 UIImage!;
-var tempImage4 UIImage!;
+var savedRecipeArray = [SavedRecipe]()
 
 class SavedRecipesTableViewController: UITableViewController {
     
@@ -24,21 +22,19 @@ class SavedRecipesTableViewController: UITableViewController {
     
     
     //array of saved recipes
-    var savedRecipeArray = [SavedRecipe]()
+    //var savedRecipeArray = [SavedRecipe]()
     
     //temp hardcoded saved recipes for now
     
     
     //MARK: Private Methods
-    private func loadSampleSavedRecipes(){
-        
-        
-    }
     
     func loadSavedRecipes() {
+        
         var indexArray1 = [30,31,32,33]
         var urlArray1 = [String]()
         var nameArray1 = [String]()
+        var imageArray1 = [UIImage]()
         
         for i in indexArray1 {
             let url = jsonArray[i]["image"].stringValue
@@ -46,13 +42,51 @@ class SavedRecipesTableViewController: UITableViewController {
             
             let name = jsonArray[i]["name"].stringValue
             nameArray1.append(name)
+            /*
+            if let url = URL(string:url) {
+                do {
+            let data = try Data(contentsOf: url)
+            
+                let tempImage = UIImage(data: data)!
+                imageArray1.append(tempImage)
+                    //imageArray1[i] = UIImage(data:data)!
+            }
+            catch let err{
+                print("error", err)
+                
+            }
+            }
+            savedRecipeArray.append(nil)
         }
+        for i in savedRecipeArray {
+            let SR = SavedRecipe(recipeName: nameArray1[i], recipeImage: imageArray1[i])
+            savedRecipeArray.append(SR)
+                    
+    
+            let SR = SavedRecipe(recipeName: name, recipeImage: tempImage)
+            savedRecipeArray.append(SR)
+    */
+            
+            
+            //imageArray1.append()
+            
+        }
+        /*
+        var SR1 = SavedRecipe(recipeName: nameArray1[0], recipeImage: imageArray[0])
+        savedRecipeArray[0] = SR1
+        var SR2 = SavedRecipe(recipeName: nameArray1[1], recipeImage: imageArray[1])
+        savedRecipeArray[1] = SR2
+        var SR3 = SavedRecipe(recipeName: nameArray1[2], recipeImage: imageArray[2])
+        savedRecipeArray[2] = SR3
+        var SR4 = SavedRecipe(recipeName: nameArray1[3], recipeImage: imageArray[3])
+        savedRecipeArray[3] = SR4
+ */
         
         if let url = URL(string:urlArray1[0]) {
             do {
                 let data = try Data(contentsOf: url)
-                tempImage1 = UIImage(data:data)
-                imageArray.add(tempImage1)
+                imageArray[0] = UIImage(data:data)!
+                
             }
             catch let err{
                 print("error", err)
@@ -61,7 +95,7 @@ class SavedRecipesTableViewController: UITableViewController {
         if let url = URL(string:urlArray1[1]) {
             do {
                 let data = try Data(contentsOf: url)
-                tempImage2 = UIImage(data:data)
+                imageArray[1] = UIImage(data:data)!
             }
             catch let err{
                 print("error", err)
@@ -70,7 +104,7 @@ class SavedRecipesTableViewController: UITableViewController {
         if let url = URL(string:urlArray1[2]) {
             do {
                 let data = try Data(contentsOf: url)
-                tempImage3 = UIImage(data:data)
+                imageArray[2] = UIImage(data:data)!
             }
             catch let err{
                 print("error", err)
@@ -79,19 +113,24 @@ class SavedRecipesTableViewController: UITableViewController {
         if let url = URL(string:urlArray1[3]) {
             do {
                 let data = try Data(contentsOf: url)
-                tempImage4 = UIImage(data:data)
+                imageArray[3] = UIImage(data:data)!
             }
             catch let err{
                 print("error", err)
             }
         }
-        var SR1 = SavedRecipe(recipeName: nameArray1[0], recipeImage: tempImage1)
-        savedRecipeArray.add(SR1)
-        var SR2 = SavedRecipe(recipeName: nameArray1[1], recipeImage: tempImage2)
-        savedRecipeArray.add(SR2)
-        var SR3 = SavedRecipe(recipeName: nameArray1[2], recipeImage: tempImage3)
-        savedRecipeArray.add(SR3)
-        var SR4 = SavedRecipe(recipeName: nameArray1[3], recipeImage: tempImage4)
+            
+        var SR1 = SavedRecipe(recipeName: nameArray1[0], recipeImage: imageArray[0])
+        savedRecipeArray[0] = SR1
+        var SR2 = SavedRecipe(recipeName: nameArray1[1], recipeImage: imageArray[1])
+        savedRecipeArray[1] = SR2
+        var SR3 = SavedRecipe(recipeName: nameArray1[2], recipeImage: imageArray[2])
+        savedRecipeArray[2] = SR3
+        var SR4 = SavedRecipe(recipeName: nameArray1[3], recipeImage: imageArray[3])
+        savedRecipeArray[3] = SR4
+ 
+    }
+
         
         
         //SavedRecipe(recipeName: nameArray1[0] )
@@ -108,12 +147,13 @@ class SavedRecipesTableViewController: UITableViewController {
        // }
         
         
-    }
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadSavedRecipes()
+    }
         /*
         
         var indexArray1 = [30,31,32,33]
@@ -143,7 +183,6 @@ class SavedRecipesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         }
  */
-    }
  
 
     // MARK: - Table view data source
@@ -161,11 +200,11 @@ class SavedRecipesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "SavedRecipeTableViewCell"
+        _ = "SavedRecipeTableViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: "SavedRecipeTableViewCell", for: indexPath) as! SavedRecipeTableViewCell
         let sRecipe = savedRecipeArray[indexPath.row]
         cell.SavedRecipeName.text = sRecipe.recipeName
-        cell.savedRecipeImage.image = tempImage1
+        cell.savedRecipeImage.image = sRecipe.recipeImage
         //cell.textLabel?.text = "Cell Row: \(indexPath.row) Section: \(indexPath.section)"
 
         // Configure the cell...
