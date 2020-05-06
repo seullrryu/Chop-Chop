@@ -40,8 +40,8 @@ class ExploreSpecificController: UIViewController {
        }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let url = URL(string:urlArray[0]) {
+        getRecipeRequest(idOfRecipe: recipeID)
+        if let url = URL(string:recipeImage) {
             do {
                 let data = try Data(contentsOf: url)
                 self.img.image = UIImage(data:data)
@@ -51,6 +51,29 @@ class ExploreSpecificController: UIViewController {
             catch let err {
                 print("error", err)
             }
+        }
+        
+        
+        
+    }
+    
+    func getRecipeRequest(idOfRecipe: String) {
+        let url = "https://api.spoonacular.com/recipes/"
+        let url2 = "/summary?apiKey=7416dc48fba247819ce90cd88a3974ec"
+        let id = idOfRecipe
+        
+        let requestURL = url + id + url2
+        print(requestURL)
+        
+        AF.request(requestURL, method: .get, encoding:JSONEncoding.default).responseData { response in
+            guard let data = response.data else {return}
+            let json = try? JSON(data: data)
+            let stringJSON = json!["summary"].stringValue
+            
+            let str = stringJSON.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+            print(str)
+            self.label.text = str
+            
         }
     }
     
