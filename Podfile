@@ -21,4 +21,9 @@ target 'Chop-Chop' do
 
   # Optionally, include the Swift extensions if you're using Swift.
   pod 'FirebaseFirestoreSwift'
+  
+  
+  # JSON dependencies
+  pod 'Alamofire', '~> 5.1'
+  pod 'SwiftyJSON', '~> 5.0'
 end

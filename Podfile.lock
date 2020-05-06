@@ -158,6 +158,7 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - Alamofire (5.1.0)
   - AppAuth (1.3.0):
     - AppAuth/Core (= 1.3.0)
     - AppAuth/ExternalUserAgent (= 1.3.0)
@@ -300,18 +301,22 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.1)
   - Firebase/Analytics
   - Firebase/Firestore
   - FirebaseFirestoreSwift
   - FirebaseUI/Auth
   - FirebaseUI/Google
   - GoogleSignIn
+  - SwiftyJSON (~> 5.0)
 
 SPEC REPOS:
   trunk:
     - abseil
+    - Alamofire
     - AppAuth
     - BoringSSL-GRPC
     - Firebase
@@ -337,9 +342,11 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   Firebase: 585ae467b3edda6a5444e788fda6888f024d8d6f
@@ -365,7 +372,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 99efa223cd7ecf7a8cc7391bfa2cc15ff6554d07
+PODFILE CHECKSUM: 2af41b3149fff48b05ece405d8f0a0b0dfec0cd8
 
 COCOAPODS: 1.9.1

@@ -11,3 +11,7 @@ import Foundation
 struct Recipes {
     static var recipes = [Dictionary<String,Any>]();
 }
+
+struct Recipes2 {
+    static var recipes = [Dictionary<String,Any>]();
+}

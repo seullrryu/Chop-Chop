@@ -13,6 +13,7 @@ import FirebaseUI
 import FirebaseFirestore
 
 var recipes = Recipes.recipes
+var jsonRecipes = Recipes2.recipes
 
 class ViewController: UIViewController {
     
@@ -69,8 +70,9 @@ class ViewController: UIViewController {
             } else {
                 for document in querySnapshot!.documents {
                     //print("\(document.documentID) => \(document.data())")
-                    //recipes.append("\(document.documentID) => \(document.data())")
                     recipes.append(document.data())
+                    
+                    jsonRecipes.append(document.data())
                 }
 //                print((recipes[2]))
             }
