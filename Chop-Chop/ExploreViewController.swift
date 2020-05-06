@@ -121,6 +121,7 @@ class ExploreViewController: UIViewController {
         //print(jsonRecipes[0])
         //print(jsonArray[2])
         print(jsonArray[22]["name"])
+        print(jsonArray[22]["missedIngredients"][0]["name"])
         print(jsonArray[22]["name"].stringValue)
         
         // or go here
