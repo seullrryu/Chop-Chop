@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -261,6 +261,14 @@
                                     <action selector="img4Click:" destination="zYW-EO-Kdb" eventType="touchUpInside" id="Cbx-zE-mmW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDS-g5-Rac">
+                                <rect key="frame" x="152" y="760" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Refresh Recipes"/>
+                                <connections>
+                                    <action selector="refreshButton:" destination="zYW-EO-Kdb" eventType="touchUpInside" id="SPE-vK-ztg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="AIO-3P-aTL"/>
@@ -277,6 +285,7 @@
                         <outlet property="label2" destination="mQS-vV-mxg" id="Wo7-mU-zRO"/>
                         <outlet property="label3" destination="wUV-IS-xmB" id="5JS-9P-oFz"/>
                         <outlet property="label4" destination="Iev-aY-t8j" id="uqX-mZ-X8G"/>
+                        <outlet property="refresh" destination="EDS-g5-Rac" id="gLz-fh-hHW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ttn-Yz-bay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

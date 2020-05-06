@@ -35,6 +35,7 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var label4: UILabel!
+    @IBOutlet weak var refresh: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -185,6 +186,8 @@ class ExploreViewController: UIViewController {
         recipeID = idArray[3]
         recipeImage = urlArray[3]
         newStoryboard()
+    }
+    @IBAction func refreshButton(_ sender: Any) {
     }
     
     func newStoryboard() {
