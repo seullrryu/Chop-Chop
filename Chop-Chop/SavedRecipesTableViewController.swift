@@ -13,7 +13,8 @@ import Alamofire
 class SavedRecipesTableViewController: UITableViewController {
     
     //MARK: Properties
-    
+    //array of saved recipes
+    var savedRecipeArray = [SavedRecipe]()
     
     //temp hardcoded saved recipes for now
     
