@@ -31,6 +31,7 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var img3: UIButton!
     @IBOutlet weak var img4: UIButton!
     
+    @IBOutlet weak var triviaLabel: UILabel!
     
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
@@ -40,6 +41,7 @@ class ExploreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getTriviaRequest()
         loadNewRecipes()
         display()
         
@@ -197,6 +199,7 @@ class ExploreViewController: UIViewController {
         shouldLoad = true
         loadNewRecipes()
         display()
+        getTriviaRequest()
         print("refreshed")
     }
     
@@ -204,6 +207,23 @@ class ExploreViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil);
             let vc = storyboard.instantiateViewController(withIdentifier: "exploreSpecific") ; // MySecondSecreen the storyboard ID
             self.present(vc, animated: true, completion: nil);
+    }
+    
+    func getTriviaRequest() {
+        let url = "https://api.spoonacular.com/food/trivia/random?apiKey=7416dc48fba247819ce90cd88a3974ec"
+        
+        let requestURL = url
+        print(requestURL)
+        
+        AF.request(requestURL, method: .get, encoding:JSONEncoding.default).responseData { response in
+            guard let data = response.data else {return}
+            let json = try? JSON(data: data)
+            let stringJSON = json!["text"].stringValue
+            
+            //print(stringJSON)
+            self.triviaLabel.text = stringJSON
+            
+        }
     }
     
     
