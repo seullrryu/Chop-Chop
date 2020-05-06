@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class ExploreSpecificController: UIViewController {
 
@@ -18,7 +20,17 @@ class ExploreSpecificController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let url = URL(string:urlArray[0]) {
+            do {
+                let data = try Data(contentsOf: url)
+                self.img.image = UIImage(data:data)
+                
+                //self.label1.text = nameArray[0]
+            }
+            catch let err {
+                print("error", err)
+            }
+        }
     }
     
     @IBAction func backClick(_ sender: Any) {

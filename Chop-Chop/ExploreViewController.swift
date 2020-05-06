@@ -9,8 +9,13 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+
+//Global Variables
 var recipeID = ""
 var idArray = [String]()
+var urlArray = [String]()
+
+
 class ExploreViewController: UIViewController {
     
  
@@ -33,10 +38,10 @@ class ExploreViewController: UIViewController {
         let length = jsonArray.count
         
         var indexArray = [Int]()
-        var urlArray = [String]()
+        
         var nameArray = [String]()
         
-        var index1 = Int.random(in: 0 ..< length)
+        let index1 = Int.random(in: 0 ..< length)
         indexArray.append(index1)
         
         var index2 = 0
