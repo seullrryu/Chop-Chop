@@ -13,6 +13,7 @@ import Alamofire
 //Global Variables
 var recipeID = ""
 var recipeImage = ""
+var recipeName = ""
 var idArray = [String]()
 var urlArray = [String]()
 var indexArray = [Int]()
@@ -53,7 +54,8 @@ class ExploreViewController: UIViewController {
             
             idArray.removeAll()
             urlArray.removeAll()
-            
+            indexArray.removeAll()
+            nameArray.removeAll()
             
             
             var index1 = Int.random(in: 0 ..< length)
@@ -166,12 +168,14 @@ class ExploreViewController: UIViewController {
         print(idArray[0])
         recipeID = idArray[0]
         recipeImage = urlArray[0]
+        recipeName = nameArray[0]
         newStoryboard()
     }
     @IBAction func img2Click(_ sender: Any) {
         print(idArray[1])
         recipeID = idArray[1]
         recipeImage = urlArray[1]
+        recipeName = nameArray[1]
         newStoryboard()
         
     }
@@ -179,15 +183,21 @@ class ExploreViewController: UIViewController {
         print(idArray[2])
         recipeID = idArray[2]
         recipeImage = urlArray[2]
+        recipeName = nameArray[2]
         newStoryboard()
     }
     @IBAction func img4Click(_ sender: Any) {
        print(idArray[3])
         recipeID = idArray[3]
         recipeImage = urlArray[3]
+        recipeName = nameArray[3]
         newStoryboard()
     }
     @IBAction func refreshButton(_ sender: Any) {
+        shouldLoad = true
+        loadNewRecipes()
+        display()
+        print("refreshed")
     }
     
     func newStoryboard() {
