@@ -12,14 +12,20 @@ import Alamofire
 
 var allRecipes = [Recipe]()
 class PotentialRecipesViewController: UIViewController {
-
+    @IBOutlet weak var img1: UIImageView!
+    @IBOutlet weak var img2: UIImageView!
+    @IBOutlet weak var img3: UIImageView!
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Load all the scans
 //        var scans = Scans.allScans
         
-        var scans = ["Honey", "Butter", "Potato", "Chicken", "Cheese"]
+        var scans = ["Honey", "Beef", "Potato", "Chicken", "Cheese"]
         
         //MARK: Implement matching algorithm
         for recipe in jsonArray {
@@ -49,12 +55,40 @@ class PotentialRecipesViewController: UIViewController {
             let current = Recipe(name:name, originalString:allOriginalStrings, image:recipe["image"].stringValue, ingredients:string, count: counter)
             allRecipes.append(current)
         }
-        
-        print(allRecipes[2].ingredients)
-        print(allRecipes[2].count)
-        
+            
         //Connect them back to the view controller, make a table view of all the recipes
-        let array = allRecipes.sorted { $0.count < $1.count }
-        print(array)
+        var array = allRecipes.sorted {  $0.count < $1.count }
+        array = array.reversed()
+        
+        if let url = URL(string:array[0].image) {
+            do {
+                let data = try Data(contentsOf: url)
+                self.img1.image = UIImage(data:data)
+                self.label1.text = array[0].name
+            }
+            catch let err {
+                print("error", err)
+            }
+        }
+        if let url = URL(string:array[1].image) {
+            do {
+                let data = try Data(contentsOf: url)
+                self.img2.image = UIImage(data:data)
+                self.label2.text = array[1].name
+            }
+            catch let err {
+                print("error", err)
+            }
+        }
+        if let url = URL(string:array[2].image) {
+            do {
+                let data = try Data(contentsOf: url)
+                self.img3.image = UIImage(data:data)
+                self.label3.text = array[2].name
+            }
+            catch let err {
+                print("error", err)
+            }
+        }
     }
 }
