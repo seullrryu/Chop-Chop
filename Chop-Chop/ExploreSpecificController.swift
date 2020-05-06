@@ -14,21 +14,21 @@ class ExploreSpecificController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
+    @IBOutlet weak var back: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backClick(_ sender: Any) {
+        newStoryboard()
     }
-    */
+    
+    func newStoryboard() {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil);
+            let vc = storyboard.instantiateViewController(withIdentifier: "explore") ; // MySecondSecreen the storyboard ID
+            self.present(vc, animated: true, completion: nil);
+    }
 
 }

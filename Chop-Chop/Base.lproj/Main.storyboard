@@ -196,9 +196,9 @@
         <!--Popular Recipes-->
         <scene sceneID="f5q-m9-pDt">
             <objects>
-                <viewController id="zYW-EO-Kdb" customClass="ExploreViewController" customModule="Chop_Chop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="explore" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zYW-EO-Kdb" customClass="ExploreViewController" customModule="Chop_Chop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aNG-PR-ynE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJW-7P-2Kj">
@@ -502,7 +502,7 @@
         <!--Explore Specific Controller-->
         <scene sceneID="Ixp-Uw-ty4">
             <objects>
-                <viewController id="GFw-dL-fqq" customClass="ExploreSpecificController" customModule="Chop_Chop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="exploreSpecific" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GFw-dL-fqq" customClass="ExploreSpecificController" customModule="Chop_Chop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T5y-Mt-kxl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -516,7 +516,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="chevron.left" catalog="system"/>
                                 <connections>
-                                    <segue destination="zYW-EO-Kdb" kind="show" id="ltD-EH-jdq"/>
+                                    <action selector="backClick:" destination="GFw-dL-fqq" eventType="touchUpInside" id="16T-o2-TCY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOG-hh-FBE">
@@ -531,6 +531,7 @@
                         <viewLayoutGuide key="safeArea" id="hoK-Oi-yrT"/>
                     </view>
                     <connections>
+                        <outlet property="back" destination="S49-MS-meQ" id="p2c-5p-bYi"/>
                         <outlet property="img" destination="HvJ-f3-5gm" id="dhP-76-lfn"/>
                         <outlet property="label" destination="dOG-hh-FBE" id="KGn-X7-Hve"/>
                     </connections>
@@ -562,7 +563,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="vFv-v8-ImO"/>
-        <segue reference="ltD-EH-jdq"/>
         <segue reference="mXJ-A3-0jV"/>
     </inferredMetricsTieBreakers>
     <resources>

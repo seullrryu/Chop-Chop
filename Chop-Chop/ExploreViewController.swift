@@ -9,7 +9,8 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
-
+var recipeID = ""
+var idArray = [String]()
 class ExploreViewController: UIViewController {
     
  
@@ -30,7 +31,7 @@ class ExploreViewController: UIViewController {
         
         // Choose 4 random recipes from the recipee in the database
         let length = jsonArray.count
-        var idArray = [String]()
+        
         var indexArray = [Int]()
         var urlArray = [String]()
         var nameArray = [String]()
@@ -134,16 +135,31 @@ class ExploreViewController: UIViewController {
 
     }
     @IBAction func img1Click(_ sender: Any) {
-        print("1")
+        print(idArray[0])
+        recipeID = idArray[0]
+        newStoryboard()
     }
     @IBAction func img2Click(_ sender: Any) {
-        print("2")
+        print(idArray[1])
+        recipeID = idArray[1]
+        newStoryboard()
+        
     }
     @IBAction func img3Click(_ sender: Any) {
-        print("3")
+        print(idArray[2])
+        recipeID = idArray[2]
+        newStoryboard()
     }
     @IBAction func img4Click(_ sender: Any) {
-        print("4")
+       print(idArray[3])
+        recipeID = idArray[3]
+        newStoryboard()
+    }
+    
+    func newStoryboard() {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil);
+            let vc = storyboard.instantiateViewController(withIdentifier: "exploreSpecific") ; // MySecondSecreen the storyboard ID
+            self.present(vc, animated: true, completion: nil);
     }
     
     
