@@ -27,6 +27,7 @@
 		8C0F44DD2462FEF900ABD9E4 /* SavedRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F44DC2462FEF800ABD9E4 /* SavedRecipesTableViewController.swift */; };
 		8C4E03312461683C00F99A63 /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E03302461683C00F99A63 /* mainView.swift */; };
 		E9A62A21F264D1CC38BBBEAD /* Pods_Chop_Chop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */; };
+		FD09549724630EC3006F6DBF /* ExploreSpecificController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD09549624630EC3006F6DBF /* ExploreSpecificController.swift */; };
 		FD4B81852455F20100A6B847 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD4B81842455F20100A6B847 /* GoogleService-Info.plist */; };
 		FD4B81872455F22700A6B847 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FD4B81862455F22700A6B847 /* logo.png */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		8C4E03302461683C00F99A63 /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
 		B4D09FB597E04BE830148EEC /* Pods_Chop_Chop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chop_Chop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF273E3830F95989AE01CD9 /* Pods-Chop-Chop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chop-Chop.debug.xcconfig"; path = "Target Support Files/Pods-Chop-Chop/Pods-Chop-Chop.debug.xcconfig"; sourceTree = "<group>"; };
+		FD09549624630EC3006F6DBF /* ExploreSpecificController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSpecificController.swift; sourceTree = "<group>"; };
 		FD4B81842455F20100A6B847 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FD4B81862455F22700A6B847 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 				8C0F44DC2462FEF800ABD9E4 /* SavedRecipesTableViewController.swift */,
 				8C4E03302461683C00F99A63 /* mainView.swift */,
 				471BF6FC2460F892007F1694 /* ExploreViewController.swift */,
+				FD09549624630EC3006F6DBF /* ExploreSpecificController.swift */,
 				471BF6F8245EA7A5007F1694 /* StartViewController.swift */,
 				471BF6F6245EA665007F1694 /* PotentialRecipesViewController.swift */,
 				479E845D2457D8DB004E7906 /* ScanViewController.swift */,
@@ -275,6 +278,7 @@
 				479E845E2457D8DB004E7906 /* ScanViewController.swift in Sources */,
 				475306252444E4E900A4CEC6 /* ViewController.swift in Sources */,
 				8C4E03312461683C00F99A63 /* mainView.swift in Sources */,
+				FD09549724630EC3006F6DBF /* ExploreSpecificController.swift in Sources */,
 				8C0F44DD2462FEF900ABD9E4 /* SavedRecipesTableViewController.swift in Sources */,
 				4753062B2444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld in Sources */,
 				479E84602457F0F1004E7906 /* ProductCatalog.swift in Sources */,
