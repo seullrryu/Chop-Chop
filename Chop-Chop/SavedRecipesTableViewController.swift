@@ -25,6 +25,7 @@ class SavedRecipesTableViewController: UITableViewController {
     //MARK: Private Methods
     private func loadSampleSavedRecipes(){
         
+        
     }
     
     private func loadSavedRecipes() {
@@ -52,7 +53,7 @@ class SavedRecipesTableViewController: UITableViewController {
         if let url = URL(string: urlArray[0]) {
             do {
                // let data = try Data(contentsOf: url)
-                self.img1.setImage(UIImage)
+                
                 ////self.img1.setImage(UIImage
             }
 
