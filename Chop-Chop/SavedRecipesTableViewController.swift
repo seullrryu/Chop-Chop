@@ -85,7 +85,7 @@ class SavedRecipesTableViewController: UITableViewController {
         if let url = URL(string:urlArray1[0]) {
             do {
                 let data = try Data(contentsOf: url)
-                imageArray[0] = UIImage(data:data)!
+                imageArray.append(UIImage(data:data)!)
                 
             }
             catch let err{
@@ -95,7 +95,7 @@ class SavedRecipesTableViewController: UITableViewController {
         if let url = URL(string:urlArray1[1]) {
             do {
                 let data = try Data(contentsOf: url)
-                imageArray[1] = UIImage(data:data)!
+                imageArray.append(UIImage(data:data)!)
             }
             catch let err{
                 print("error", err)
@@ -104,7 +104,7 @@ class SavedRecipesTableViewController: UITableViewController {
         if let url = URL(string:urlArray1[2]) {
             do {
                 let data = try Data(contentsOf: url)
-                imageArray[2] = UIImage(data:data)!
+                imageArray.append(UIImage(data:data)!)
             }
             catch let err{
                 print("error", err)
@@ -113,7 +113,7 @@ class SavedRecipesTableViewController: UITableViewController {
         if let url = URL(string:urlArray1[3]) {
             do {
                 let data = try Data(contentsOf: url)
-                imageArray[3] = UIImage(data:data)!
+                imageArray.append(UIImage(data:data)!)
             }
             catch let err{
                 print("error", err)
@@ -121,13 +121,13 @@ class SavedRecipesTableViewController: UITableViewController {
         }
             
         var SR1 = SavedRecipe(recipeName: nameArray1[0], recipeImage: imageArray[0])
-        savedRecipeArray[0] = SR1
+        savedRecipeArray.append(SR1)
         var SR2 = SavedRecipe(recipeName: nameArray1[1], recipeImage: imageArray[1])
-        savedRecipeArray[1] = SR2
+        savedRecipeArray.append(SR2)
         var SR3 = SavedRecipe(recipeName: nameArray1[2], recipeImage: imageArray[2])
-        savedRecipeArray[2] = SR3
+        savedRecipeArray.append(SR3)
         var SR4 = SavedRecipe(recipeName: nameArray1[3], recipeImage: imageArray[3])
-        savedRecipeArray[3] = SR4
+        savedRecipeArray.append(SR4)
  
     }
 
