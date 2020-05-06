@@ -35,6 +35,13 @@
                                 <rect key="frame" x="107" y="175" width="200" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f78-yW-hyD">
+                                <rect key="frame" x="34" y="716" width="347" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -45,13 +52,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="jokeLabel" destination="f78-yW-hyD" id="gAq-l4-xDP"/>
                         <outlet property="viewForLayer" destination="8bC-Xf-vdC" id="Pn1-Ec-h2S"/>
                         <segue destination="QbX-Rd-dOP" kind="presentation" identifier="toStart" modalPresentationStyle="fullScreen" id="LDB-9d-9oS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2212" y="2294"/>
+            <point key="canvasLocation" x="-2214.4927536231885" y="2293.5267857142858"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="qCG-9e-Rlf">
