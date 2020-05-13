@@ -24,29 +24,30 @@ class PotentialRecipesViewController: UIViewController {
         
         //Load all the scans
 //        var scans = Scans.allScans
-        
-        var scans = ["Honey", "Beef", "Potato", "Chicken", "Cheese"]
+//        let inputs = Input.allInputs
+//        print(inputs)
+//        let scans = ["Honey", "Beef", "Potato", "Chicken", "Cheese"]
         
         //MARK: Implement matching algorithm
         for recipe in jsonArray {
             var string = ""
-            var name = recipe["name"].stringValue
+            let name = recipe["name"].stringValue
             var allOriginalStrings = ""
             
             for ingredient in recipe["missedIngredients"] {
                 let json = JSON(ingredient.1)
-                string += json["name"].stringValue + ", "
+                string += json["name"].stringValue.lowercased() + ", "
                 allOriginalStrings += json["originalString"].stringValue + ", "
             }
             
             for ingredient in recipe["usedIngredients"] {
                 let json = JSON(ingredient.1)
-                string += json["name"].stringValue + ", "
+                string += json["name"].stringValue.lowercased() + ", "
                 allOriginalStrings += json["originalString"].stringValue + ", "
             }
             
             var counter = 0
-            for ingredient in scans {
+            for ingredient in Input.allInputs {
                 if (string.contains(ingredient.lowercased())) {
                    counter += 1
                }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 import SwiftyJSON
 import Alamofire
 
@@ -158,14 +159,17 @@ class ExploreViewController: UIViewController {
             // https://github.com/SwiftyJSON/SwiftyJSON
             // For video tutorial
             // https://www.youtube.com/watch?v=Rqr3w8scm2E
-            
-            
-            
-        
-                
-                
-                
     }
+    
+    @IBAction func logout(_ sender: Any) {
+        print("Signing Out")
+        GIDSignIn.sharedInstance().signOut()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier: "loginView") ; // MySecondSecreen the storyboard ID
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil);
+    }
+    
     @IBAction func img1Click(_ sender: Any) {
         print(idArray[0])
         recipeID = idArray[0]

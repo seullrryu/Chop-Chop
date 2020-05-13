@@ -30,17 +30,21 @@ class ViewController: UIViewController {
     var w = 414
     var h = 300
     
+//    var screenWidth = UIScreen.main.bounds.width
+//    var screenHeight = UIScreen.main.bounds.height
+
     
     @IBOutlet weak var GButton: UIButton!
     
     func createGradientLayer() {
         gradientLayer = CAGradientLayer()
-        gradientLayer.cornerRadius = 80.0
-        gradientLayer.frame = CGRect(x: x, y:y, width: w, height: h)
+//        gradientLayer.cornerRadius = 50.0
+        gradientLayer.frame = self.view.bounds
+        self.gradientLayer.locations = [0.0, 1.0]
         
         gradientLayer.colors = [blueColor.cgColor, greenColor.cgColor]
+        gradientLayer.zPosition = -2;
         self.view.layer.addSublayer(gradientLayer)
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -48,7 +52,6 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         getJokeRequest()
 //        let mainPage = self.storyboard!.instantiateViewController(withIdentifier: "Start") as! UIViewController
 //        

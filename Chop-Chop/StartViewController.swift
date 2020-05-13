@@ -7,27 +7,37 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class StartViewController: UIViewController {
-
+    @IBOutlet weak var ingredients: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Once you go back to start, clear all the previous scans
-        var scans = Scans.allScans
-        scans.removeAll()
-        print(scans)
+//        var scans = Scans.allScans
+//        scans.removeAll()
+//        print(scans)
+        
+        var inputs = Input.allInputs
+        inputs.removeAll()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func logout(_ sender: Any) {
+        print("Signing Out")
+        GIDSignIn.sharedInstance().signOut()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier: "loginView") ; // MySecondSecreen the storyboard ID
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil);
     }
-    */
-
+    @IBAction func generate(_ sender: Any) {
+        let allIngredients = ingredients.text!
+        let ingredientsArray = allIngredients.components(separatedBy: ",")
+        
+        for string in ingredientsArray {
+            Input.allInputs.append(string.trimmingCharacters(in: .whitespacesAndNewlines))
+        }
+    }
 }

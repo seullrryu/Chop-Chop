@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47020809246B994800D34A68 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47020808246B994800D34A68 /* Input.swift */; };
 		471BF6F5245E91B3007F1694 /* Scans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471BF6F4245E91B3007F1694 /* Scans.swift */; };
 		471BF6F7245EA665007F1694 /* PotentialRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471BF6F6245EA665007F1694 /* PotentialRecipesViewController.swift */; };
 		471BF6F9245EA7A5007F1694 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471BF6F8245EA7A5007F1694 /* StartViewController.swift */; };
@@ -20,6 +21,7 @@
 		4753062B2444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 475306292444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld */; };
 		4753062D2444E4EC00A4CEC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4753062C2444E4EC00A4CEC6 /* Assets.xcassets */; };
 		475306302444E4EC00A4CEC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4753062E2444E4EC00A4CEC6 /* LaunchScreen.storyboard */; };
+		478FFA2E246BC5C500025327 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FFA2D246BC5C500025327 /* ListViewController.swift */; };
 		479E845E2457D8DB004E7906 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E845D2457D8DB004E7906 /* ScanViewController.swift */; };
 		479E84602457F0F1004E7906 /* ProductCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E845F2457F0F1004E7906 /* ProductCatalog.swift */; };
 		479E84622457F123004E7906 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E84612457F123004E7906 /* Product.swift */; };
@@ -34,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47020808246B994800D34A68 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		471BF6F4245E91B3007F1694 /* Scans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scans.swift; sourceTree = "<group>"; };
 		471BF6F6245EA665007F1694 /* PotentialRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotentialRecipesViewController.swift; sourceTree = "<group>"; };
 		471BF6F8245EA7A5007F1694 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		4753062C2444E4EC00A4CEC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4753062F2444E4EC00A4CEC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		475306312444E4EC00A4CEC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		478FFA2D246BC5C500025327 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		479E845D2457D8DB004E7906 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		479E845F2457F0F1004E7906 /* ProductCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalog.swift; sourceTree = "<group>"; };
 		479E84612457F123004E7906 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				475306222444E4E900A4CEC6 /* SceneDelegate.swift */,
 				475306242444E4E900A4CEC6 /* ViewController.swift */,
 				475306262444E4E900A4CEC6 /* Main.storyboard */,
+				478FFA2D246BC5C500025327 /* ListViewController.swift */,
 				8C0F44DA2462D92300ABD9E4 /* SavedRecipeTableViewCell.swift */,
 				8C0F44DC2462FEF800ABD9E4 /* SavedRecipesTableViewController.swift */,
 				471BF6FC2460F892007F1694 /* ExploreViewController.swift */,
@@ -131,6 +136,7 @@
 				479E84612457F123004E7906 /* Product.swift */,
 				8C1215DB24632A6200326842 /* SavedRecipesList.swift */,
 				471BF6F4245E91B3007F1694 /* Scans.swift */,
+				47020808246B994800D34A68 /* Input.swift */,
 				471BF6FA24608EF2007F1694 /* Recipes.swift */,
 				4753062C2444E4EC00A4CEC6 /* Assets.xcassets */,
 				4753062E2444E4EC00A4CEC6 /* LaunchScreen.storyboard */,
@@ -284,7 +290,9 @@
 				FD09549724630EC3006F6DBF /* ExploreSpecificController.swift in Sources */,
 				8C1215DC24632A6200326842 /* SavedRecipesList.swift in Sources */,
 				8C0F44DD2462FEF900ABD9E4 /* SavedRecipesTableViewController.swift in Sources */,
+				47020809246B994800D34A68 /* Input.swift in Sources */,
 				4753062B2444E4E900A4CEC6 /* Chop_Chop.xcdatamodeld in Sources */,
+				478FFA2E246BC5C500025327 /* ListViewController.swift in Sources */,
 				479E84602457F0F1004E7906 /* ProductCatalog.swift in Sources */,
 				8C0F44DB2462D92300ABD9E4 /* SavedRecipeTableViewCell.swift in Sources */,
 				475306212444E4E900A4CEC6 /* AppDelegate.swift in Sources */,
