@@ -12,21 +12,22 @@ import Alamofire
 
 var allRecipes = [Recipe]()
 class PotentialRecipesViewController: UIViewController {
-    @IBOutlet weak var img1: UIImageView!
-    @IBOutlet weak var img2: UIImageView!
-    @IBOutlet weak var img3: UIImageView!
+    @IBOutlet weak var img1: UIButton!
+    @IBOutlet weak var img2: UIButton!
+    @IBOutlet weak var img3: UIButton!
+    
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //Load all the scans
-//        var scans = Scans.allScans
-//        let inputs = Input.allInputs
-//        print(inputs)
-//        let scans = ["Honey", "Beef", "Potato", "Chicken", "Cheese"]
+    override func loadView() {
+        super.loadView()
+        allRecipes.removeAll()
+        idArray.removeAll()
+        urlArray.removeAll()
+        nameArray.removeAll()
+
+        print("hellllo", Input.allInputs)
         
         //MARK: Implement matching algorithm
         for recipe in jsonArray {
@@ -53,7 +54,7 @@ class PotentialRecipesViewController: UIViewController {
                }
             }
             
-            let current = Recipe(name:name, originalString:allOriginalStrings, image:recipe["image"].stringValue, ingredients:string, count: counter)
+            let current = Recipe(name:name, originalString:allOriginalStrings, image:recipe["image"].stringValue, ingredients:string, count: counter, id: recipe["id"].stringValue)
             allRecipes.append(current)
         }
             
@@ -61,10 +62,24 @@ class PotentialRecipesViewController: UIViewController {
         var array = allRecipes.sorted {  $0.count < $1.count }
         array = array.reversed()
         
+        idArray.append(array[0].id)
+        idArray.append(array[1].id)
+        idArray.append(array[2].id)
+        
+        urlArray.append(array[0].image)
+        urlArray.append(array[1].image)
+        urlArray.append(array[2].image)
+        
+        nameArray.append(array[0].name)
+        nameArray.append(array[1].name)
+        nameArray.append(array[2].name)
+
+
         if let url = URL(string:array[0].image) {
             do {
                 let data = try Data(contentsOf: url)
-                self.img1.image = UIImage(data:data)
+//                self.img1.setImage(UIImage(data:data), for: .normal)
+                self.img1.setBackgroundImage(UIImage(data:data), for: .normal)
                 self.label1.text = array[0].name
             }
             catch let err {
@@ -74,7 +89,7 @@ class PotentialRecipesViewController: UIViewController {
         if let url = URL(string:array[1].image) {
             do {
                 let data = try Data(contentsOf: url)
-                self.img2.image = UIImage(data:data)
+                self.img2.setBackgroundImage(UIImage(data:data), for: .normal)
                 self.label2.text = array[1].name
             }
             catch let err {
@@ -84,12 +99,38 @@ class PotentialRecipesViewController: UIViewController {
         if let url = URL(string:array[2].image) {
             do {
                 let data = try Data(contentsOf: url)
-                self.img3.image = UIImage(data:data)
+                self.img3.setBackgroundImage(UIImage(data:data), for: .normal)
                 self.label3.text = array[2].name
             }
             catch let err {
                 print("error", err)
             }
         }
+    }
+    @IBAction func img1Click(_ sender: Any) {
+        recipeID = idArray[0]
+        recipeImage = urlArray[0]
+        recipeName = nameArray[0]
+        newStoryboard()
+    }
+    @IBAction func img2Click(_ sender: Any) {
+        recipeID = idArray[1]
+        recipeImage = urlArray[1]
+        recipeName = nameArray[1]
+        newStoryboard()
+    }
+    @IBAction func img3Click(_ sender: Any) {
+        recipeID = idArray[2]
+        recipeImage = urlArray[2]
+        recipeName = nameArray[2]
+        newStoryboard()
+    }
+    func newStoryboard() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let nav = storyboard.instantiateViewController(withIdentifier: "specificRecipe") as! UINavigationController
+        let vc = storyboard.instantiateViewController(withIdentifier: "exploreSpecific")
+        nav.pushViewController(vc, animated: true)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true, completion: nil);
     }
 }

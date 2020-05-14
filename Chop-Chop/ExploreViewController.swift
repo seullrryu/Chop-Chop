@@ -24,16 +24,13 @@ var shouldLoad = true
 
 
 class ExploreViewController: UIViewController {
-    
- 
     @IBOutlet weak var img1: UIButton!
-    
     @IBOutlet weak var img2: UIButton!
     @IBOutlet weak var img3: UIButton!
     @IBOutlet weak var img4: UIButton!
     
     @IBOutlet weak var triviaLabel: UILabel!
-    
+
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
@@ -45,9 +42,6 @@ class ExploreViewController: UIViewController {
         getTriviaRequest()
         loadNewRecipes()
         display()
-        
-        
-
     }
     
     func loadNewRecipes() {
@@ -95,70 +89,65 @@ class ExploreViewController: UIViewController {
             }
             shouldLoad = false
         }
-        
     }
         
     func display() {
-            
-            
-    //        print(urlArray)
-            
-            if let url = URL(string:urlArray[0]) {
-                do {
-                    let data = try Data(contentsOf: url)
-                    self.img1.setImage(UIImage(data:data), for: .normal)
-                    self.label1.text = nameArray[0]
-                }
-                catch let err {
-                    print("error", err)
-                }
+        if let url = URL(string:urlArray[0]) {
+            do {
+                let data = try Data(contentsOf: url)
+                self.img1.setImage(UIImage(data:data), for: .normal)
+                self.label1.text = nameArray[0]
             }
-            
-            if let url = URL(string:urlArray[1]) {
-                do {
-                    let data = try Data(contentsOf: url)
-                    self.img2.setImage(UIImage(data:data), for: .normal)
-                    self.label2.text = nameArray[1]
-                }
-                catch let err {
-                    print("error", err)
-                }
+            catch let err {
+                print("error", err)
             }
-            
-            if let url = URL(string:urlArray[2]) {
-                do {
-                    let data = try Data(contentsOf: url)
-                    self.img3.setImage(UIImage(data:data), for: .normal)
-                    self.label3.text = nameArray[2]
-                }
-                catch let err {
-                    print("error", err)
-                }
+        }
+        
+        if let url = URL(string:urlArray[1]) {
+            do {
+                let data = try Data(contentsOf: url)
+                self.img2.setImage(UIImage(data:data), for: .normal)
+                self.label2.text = nameArray[1]
             }
-            
-            if let url = URL(string:urlArray[3]) {
-                do {
-                    let data = try Data(contentsOf: url)
-                    self.img4.setImage(UIImage(data:data), for: .normal)
-                    self.label4.text = nameArray[3]
-                }
-                catch let err {
-                    print("error", err)
-                }
+            catch let err {
+                print("error", err)
             }
-            
-            
-            // IMPORTANT
-            // Look below to see how to parse JSON
-            
-    //        print(jsonArray[22]["name"])
-    //        print(jsonArray[22]["missedIngredients"][0]["name"])
-    //        print(jsonArray[22]["name"].stringValue)
-            
-            // or go here
-            // https://github.com/SwiftyJSON/SwiftyJSON
-            // For video tutorial
-            // https://www.youtube.com/watch?v=Rqr3w8scm2E
+        }
+        
+        if let url = URL(string:urlArray[2]) {
+            do {
+                let data = try Data(contentsOf: url)
+                self.img3.setImage(UIImage(data:data), for: .normal)
+                self.label3.text = nameArray[2]
+            }
+            catch let err {
+                print("error", err)
+            }
+        }
+        
+        if let url = URL(string:urlArray[3]) {
+            do {
+                let data = try Data(contentsOf: url)
+                self.img4.setImage(UIImage(data:data), for: .normal)
+                self.label4.text = nameArray[3]
+            }
+            catch let err {
+                print("error", err)
+            }
+        }
+        
+        
+        // IMPORTANT
+        // Look below to see how to parse JSON
+        
+//        print(jsonArray[22]["name"])
+//        print(jsonArray[22]["missedIngredients"][0]["name"])
+//        print(jsonArray[22]["name"].stringValue)
+        
+        // or go here
+        // https://github.com/SwiftyJSON/SwiftyJSON
+        // For video tutorial
+        // https://www.youtube.com/watch?v=Rqr3w8scm2E
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -183,7 +172,6 @@ class ExploreViewController: UIViewController {
         recipeImage = urlArray[1]
         recipeName = nameArray[1]
         newStoryboard()
-        
     }
     @IBAction func img3Click(_ sender: Any) {
         print(idArray[2])
@@ -208,9 +196,12 @@ class ExploreViewController: UIViewController {
     }
     
     func newStoryboard() {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil);
-            let vc = storyboard.instantiateViewController(withIdentifier: "exploreSpecific") ; // MySecondSecreen the storyboard ID
-            self.present(vc, animated: true, completion: nil);
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let nav = storyboard.instantiateViewController(withIdentifier: "specificRecipe") as! UINavigationController
+        let vc = storyboard.instantiateViewController(withIdentifier: "exploreSpecific")
+        nav.pushViewController(vc, animated: true)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true, completion: nil);
     }
     
     func getTriviaRequest() {

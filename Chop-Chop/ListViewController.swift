@@ -39,7 +39,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil);
     }
-    @IBAction func clear(_ sender: Any) {
-        Input.allInputs.removeAll()
+    @IBAction func allRecipes(_ sender: Any) {
+        
     }
 }

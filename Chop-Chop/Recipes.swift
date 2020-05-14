@@ -14,6 +14,7 @@ struct Recipe : CustomStringConvertible {
     let image: String
     let ingredients: String
     var count: Int
+    var id: String
     
     var description: String {
         return name
