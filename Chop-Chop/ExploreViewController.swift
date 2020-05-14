@@ -37,8 +37,8 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var label4: UILabel!
     @IBOutlet weak var refresh: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func loadView() {
+        super.loadView()
         getTriviaRequest()
         loadNewRecipes()
         display()
@@ -46,7 +46,6 @@ class ExploreViewController: UIViewController {
     
     func loadNewRecipes() {
         let length = jsonArray.count
-        if(shouldLoad) {
             // Choose 4 random recipes from the recipee in the database
             
             idArray.removeAll()
@@ -87,8 +86,6 @@ class ExploreViewController: UIViewController {
                 let id = jsonArray[i]["id"].stringValue
                 idArray.append(id)
             }
-            shouldLoad = false
-        }
     }
         
     func display() {

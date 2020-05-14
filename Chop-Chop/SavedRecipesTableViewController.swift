@@ -2,214 +2,51 @@
 //  SavedRecipesTableViewController.swift
 //  Chop-Chop
 //
-//  Created by Jane Kim on 5/6/20.
+//  Created by Seulmin Ryu on 5/14/20.
 //  Copyright © 2020 Seulmin Ryu. All rights reserved.
 //
 
 import UIKit
 import SwiftyJSON
 import Alamofire
+import GoogleSignIn
 
-var indexArray1 = [30,31,32,33]
-       var urlArray1 = [String]()
-       var nameArray1 = [String]()
-var imageArray = [UIImage]()
 var savedRecipeArray = [SavedRecipe]()
-
-class SavedRecipesTableViewController: UITableViewController {
-    
-    //MARK: Properties
-    
-    
-    //array of saved recipes
-    //var savedRecipeArray = [SavedRecipe]()
-    
-    //temp hardcoded saved recipes for now
-    
-    
-    //MARK: Private Methods
-    
-    func loadSavedRecipes() {
-        
-        var indexArray1 = [30,31,32,33]
-        var urlArray1 = [String]()
-        var nameArray1 = [String]()
-        var imageArray1 = [UIImage]()
-        
-        for i in indexArray1 {
-            let url = jsonArray[i]["image"].stringValue
-            urlArray1.append(url)
-            
-            let name = jsonArray[i]["name"].stringValue
-            nameArray1.append(name)
-            /*
-            if let url = URL(string:url) {
-                do {
-            let data = try Data(contentsOf: url)
-            
-                let tempImage = UIImage(data: data)!
-                imageArray1.append(tempImage)
-                    //imageArray1[i] = UIImage(data:data)!
-            }
-            catch let err{
-                print("error", err)
-                
-            }
-            }
-            savedRecipeArray.append(nil)
-        }
-        for i in savedRecipeArray {
-            let SR = SavedRecipe(recipeName: nameArray1[i], recipeImage: imageArray1[i])
-            savedRecipeArray.append(SR)
-                    
-    
-            let SR = SavedRecipe(recipeName: name, recipeImage: tempImage)
-            savedRecipeArray.append(SR)
-    */
-            
-            
-            //imageArray1.append()
-            
-        }
-        /*
-        var SR1 = SavedRecipe(recipeName: nameArray1[0], recipeImage: imageArray[0])
-        savedRecipeArray[0] = SR1
-        var SR2 = SavedRecipe(recipeName: nameArray1[1], recipeImage: imageArray[1])
-        savedRecipeArray[1] = SR2
-        var SR3 = SavedRecipe(recipeName: nameArray1[2], recipeImage: imageArray[2])
-        savedRecipeArray[2] = SR3
-        var SR4 = SavedRecipe(recipeName: nameArray1[3], recipeImage: imageArray[3])
-        savedRecipeArray[3] = SR4
- */
-        
-        if let url = URL(string:urlArray1[0]) {
-            do {
-                let data = try Data(contentsOf: url)
-                imageArray.append(UIImage(data:data)!)
-                
-            }
-            catch let err{
-                print("error", err)
-            }
-        }
-        if let url = URL(string:urlArray1[1]) {
-            do {
-                let data = try Data(contentsOf: url)
-                imageArray.append(UIImage(data:data)!)
-            }
-            catch let err{
-                print("error", err)
-            }
-        }
-        if let url = URL(string:urlArray1[2]) {
-            do {
-                let data = try Data(contentsOf: url)
-                imageArray.append(UIImage(data:data)!)
-            }
-            catch let err{
-                print("error", err)
-            }
-        }
-        if let url = URL(string:urlArray1[3]) {
-            do {
-                let data = try Data(contentsOf: url)
-                imageArray.append(UIImage(data:data)!)
-            }
-            catch let err{
-                print("error", err)
-            }
-        }
-            
-        var SR1 = SavedRecipe(recipeName: nameArray1[0], recipeImage: imageArray[0])
-        savedRecipeArray.append(SR1)
-        var SR2 = SavedRecipe(recipeName: nameArray1[1], recipeImage: imageArray[1])
-        savedRecipeArray.append(SR2)
-        var SR3 = SavedRecipe(recipeName: nameArray1[2], recipeImage: imageArray[2])
-        savedRecipeArray.append(SR3)
-        var SR4 = SavedRecipe(recipeName: nameArray1[3], recipeImage: imageArray[3])
-        savedRecipeArray.append(SR4)
- 
-    }
-
-        
-        
-        //SavedRecipe(recipeName: nameArray1[0] )
-        
-        
-        
-        //create savedRecipe objects
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-       // }
-        
-        
-    
-    
-
+class SavedRecipesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSavedRecipes()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
-        /*
-        
-        var indexArray1 = [30,31,32,33]
-        var urlArray1 = [String]()
-        var nameArray1 = [String]()
-        
-        for i in indexArray1 {
-            let url = jsonArray[i]["image"].stringValue
-            urlArray1.append(url)
-            
-            let name = jsonArray[i]["name"].stringValue
-            nameArray1.append(name)
-        }
-        
-        //use URLs to get images from json array
-        if let url = URL(string: urlArray[0]) {
-            do {
-               let data = try Data(contentsOf: url)
-                
-                ////self.img1.setImage(UIImage
-            }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        }
- */
- 
-
-    // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return savedRecipeArray.count
     }
- 
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return savedRecipeArray.count
-    }
-
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        _ = "SavedRecipeTableViewCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SavedRecipeTableViewCell", for: indexPath) as! SavedRecipeTableViewCell
-        let sRecipe = savedRecipeArray[indexPath.row]
-        cell.SavedRecipeName.text = sRecipe.recipeName
-        cell.savedRecipeImage.image = sRecipe.recipeImage
-        //cell.textLabel?.text = "Cell Row: \(indexPath.row) Section: \(indexPath.section)"
-
-        // Configure the cell...
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = savedRecipeArray[indexPath.row].name
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(savedRecipeArray[indexPath.row])
+        recipeID = savedRecipeArray[indexPath.row].id
+        recipeName = savedRecipeArray[indexPath.row].name
+        recipeImage = savedRecipeArray[indexPath.row].image
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let nav = storyboard.instantiateViewController(withIdentifier: "specificRecipe") as! UINavigationController
+        let vc = storyboard.instantiateViewController(withIdentifier: "exploreSpecific")
+        nav.pushViewController(vc, animated: true)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true, completion: nil);
+    }
+    
+    @IBAction func logout(_ sender: Any) {
+        print("Signing Out")
+        GIDSignIn.sharedInstance().signOut()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier: "loginView") ; // MySecondSecreen the storyboard ID
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil);
     }
     
 

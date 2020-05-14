@@ -12,9 +12,12 @@ import Alamofire
 
 class ExploreSpecificController: UIViewController {
 
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var label: UILabel!
+    
+    var names = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,16 @@ class ExploreSpecificController: UIViewController {
             catch let err {
                 print("error", err)
             }
+        }
+        saveButton.setImage(UIImage(systemName: "checkmark.circle.fill"),
+        for: [.highlighted, .selected])
+        
+        for recipe in savedRecipeArray {
+            names.append(recipe.name)
+        }
+        
+        if (names.contains(recipeName)) {
+            saveButton.isSelected = true
         }
     }
     
@@ -49,6 +62,16 @@ class ExploreSpecificController: UIViewController {
             let str = stringJSON.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
             print(str)
             self.label.text = str
+        }
+    }
+    @IBAction func toggle(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        let save = SavedRecipe(name: recipeName, image: recipeImage, id: recipeID)
+        if (sender.isSelected) {
+            savedRecipeArray.append(save)
+        }
+        else {
+            savedRecipeArray = savedRecipeArray.filter{$0.name != recipeName}
         }
     }
 }
