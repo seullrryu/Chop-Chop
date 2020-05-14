@@ -92,18 +92,15 @@ class ViewController: UIViewController {
                     if let err = err {
                         print("Error getting documents: \(err)")
                     } else {
-                        print("did it")
                         for document in querySnapshot!.documents {
                             //print("\(document.documentID) => \(document.data())")
                             //print(document.data())
                             let json = JSON(document.data())
                             //print(json["id"])
                             if(json["id"].stringValue == userToken) {
-                                print("got here")
                                 let len = json["ingredients"].count
                                 for i in 0...(len-1) {
                                     Input.allInputs.append(json["ingredients"][i].stringValue)
-                                    print(json["ingredients"][i].stringValue)
                                 }
                             }
                             
