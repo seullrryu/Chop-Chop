@@ -88,33 +88,24 @@ class ViewController: UIViewController {
             }
         }
         
-       db.collection("userData").getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        for document in querySnapshot!.documents {
-                            //print("\(document.documentID) => \(document.data())")
-                            //print(document.data())
-                            let json = JSON(document.data())
-                            //print(json["id"])
-                            if(json["id"].stringValue == userToken) {
-                                let len = json["ingredients"].count
-                                for i in 0...(len-1) {
-                                    Input.allInputs.append(json["ingredients"][i].stringValue)
-                                }
-                            }
-                            
-                        }
-                        /*for (index, _) in jsonRecipes.enumerated() {
-                            let json = JSON(jsonRecipes[index])
-                            jsonArray.append(json)
-                            
-                            
-                        }*/
-                    }
-        }
-        
-        
+//       db.collection("userData").getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                for document in querySnapshot!.documents {
+//                    //print("\(document.documentID) => \(document.data())")
+//                    //print(document.data())
+//                    let json = JSON(document.data())
+//                    //print(json["id"])
+//                    if(json["id"].stringValue == userToken) {
+//                        let len = json["ingredients"].count
+//                        for i in 0...(len-1) {
+//                            Input.allInputs.append(json["ingredients"][i].stringValue)
+//                        }
+//                    }
+//                }
+//            }
+//        }
     }
     
 

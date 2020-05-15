@@ -9,6 +9,10 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import Firebase
+import FirebaseUI
+import FirebaseFirestore
+
 
 class ExploreSpecificController: UIViewController {
 
@@ -66,12 +70,45 @@ class ExploreSpecificController: UIViewController {
     }
     @IBAction func toggle(_ sender: UIButton) {
         sender.isSelected.toggle()
+        let db = Firestore.firestore();
+        var ref: DocumentReference? = nil
+
         let save = SavedRecipe(name: recipeName, image: recipeImage, id: recipeID)
         if (sender.isSelected) {
             savedRecipeArray.append(save)
+            
+            db.collection("userData").document(unique).getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let doc = db.collection("userData").document(unique)
+                    doc.updateData(["savedRecipeID":FieldValue.arrayUnion([recipeID])])
+                    doc.updateData(["savedRecipeName":FieldValue.arrayUnion([recipeName])])
+                    doc.updateData(["savedRecipeImg":FieldValue.arrayUnion([recipeImage])])
+                }
+                else {
+                    print("Document does not exist")
+                    ref = db.collection("userData").addDocument(data: [
+                        "id": userToken,
+                        "ingredients": [String](),
+                        "savedRecipeID": [String](),
+                        "savedRecipeName": [String](),
+                        "savedRecipeImg": [String]()
+                    ]) { err in
+                        if let err = err {
+                            print("Error adding document: \(err)")
+                        } else {
+                            print("Document added with ID: \(ref!.documentID)")
+                        }
+                    }
+                }
+            }
         }
         else {
             savedRecipeArray = savedRecipeArray.filter{$0.name != recipeName}
+            print(savedRecipeArray)
+            let doc = db.collection("userData").document(unique)
+            doc.updateData(["savedRecipeID":FieldValue.arrayRemove([recipeID])])
+            doc.updateData(["savedRecipeName":FieldValue.arrayRemove([recipeName])])
+            doc.updateData(["savedRecipeImg":FieldValue.arrayRemove([recipeImage])])
         }
     }
 }

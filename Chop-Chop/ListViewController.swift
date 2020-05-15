@@ -8,7 +8,13 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
+import FirebaseUI
+import FirebaseFirestore
+import SwiftyJSON
+
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +32,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            let db = Firestore.firestore();
+            var element = Input.allInputs[indexPath.row]
             Input.allInputs.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .bottom)
+
+            let doc = db.collection("userData").document(unique)
+            doc.updateData(["ingredients":FieldValue.arrayRemove([element])])
         }
     }
     
