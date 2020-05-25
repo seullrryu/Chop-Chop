@@ -14,7 +14,7 @@ $ pod install
 ```
 4. Open Chop-Chop.xcodeworkspace file. 
 5. Build on the desired device utilizing the simulator (iPhone 11 Max works best). 
-6. Then signin to the app using your google account to utilize the user specific functionalities of our app.
+6. Then sign in to the app using your google account to utilize the user specific functionalities of our app.
 
 ## Wireframes
 <img src="wireframes/start.png" width="750">
