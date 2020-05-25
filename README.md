@@ -5,6 +5,17 @@
 
 With Chop Chop you can find new recipes with even the most unrelated ingredients. Our app will also allow you to choose recipes from our database and display the ingredients.
 
+## Instructions
+1. Open Terminal. 
+2. Naviage to the repository. 
+3. Install all the dependencies. 
+```shell
+$ pod install
+```
+4. Open Chop-Chop.xcodeworkspace file. 
+5. Build on the desired device utilizing the simulator (iPhone 11 Max works best). 
+6. Then signin to the app using your google account to utilize the user specific functionalities of our app.
+
 ## Wireframes
 <img src="wireframes/start.png" width="750">
 
