@@ -5,6 +5,8 @@
 
 With Chop Chop you can find new recipes with even the most unrelated ingredients. Our app will also allow you to choose recipes from our database and display the ingredients.
 
+Implemented using **Swift, Firebase, Spoonacular API.**  
+
 ## Instructions
 1. Open Terminal. 
 2. Naviage to the repository. 
